@@ -1,90 +1,100 @@
-@import '../../styles/--scss-vars.scss';
+@import "../../styles/--scss-vars.scss";
 
-.button-wrapper{
-    height: fit-content;
-    width: fit-content;
-    width: -moz-fit-content;
-    min-width: max-content;
-    padding: calc(var(--subdiv) * 2) calc(var(--subdiv) * 4);
-    border-radius: 5px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    user-select: none;
-    text-align: center;
+.button-wrapper {
+  height: fit-content;
+  width: fit-content;
+  width: -moz-fit-content;
+  min-width: max-content;
+  padding: calc(var(--subdiv) * 2) calc(var(--subdiv) * 4);
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  text-align: center;
 
-    > p{
-        @include button-text();
-        pointer-events: none;
+  > p {
+    @include button-text();
+    pointer-events: none;
+    color: $color-w0;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > span {
+      display: none;
+    }
+  }
+  &.large {
+    padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 6);
+    width: calc(100% - var(--subdiv) * 12);
+
+    > p {
+      font-size: $font-size3;
+    }
+  }
+  &.withArrow {
+    > p:after {
+      content: "";
+      display: block;
+      height: 6px;
+      width: 6px;
+      transform: translateY(-1px) rotate(45deg);
+      border-top: 2px solid $color-w0;
+      border-right: 2px solid $color-w0;
+      margin-top: 1px;
+      margin-left: var(--subdiv);
+    }
+  }
+  &.bordered {
+    border: 1px solid $color-d0;
+
+    > p {
+      @include light-text();
+      color: $color-d0-1;
+    }
+    &:hover {
+      background-color: $color-d0;
+
+      > p {
         color: $color-w0;
-        white-space: nowrap;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        > span{
-            display: none;
-        }
+      }
     }
-    &.large{
-        padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 6);
-        width: calc(100% - var(--subdiv) * 12);
+  }
+  &.white {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 15.1%,
+        #f8f8f8 100%
+      ),
+      #ffffff;
+    box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
 
-        > p{
-            font-size: $font-size3;
-        }
+    > p {
+      color: $color-d0;
+      font-weight: 400;
     }
-    &.withArrow{
-        > p:after{
-            content: "";
-            display: block;
-            height: 6px;
-            width: 6px;
-            transform: translateY(-1px) rotate(45deg);
-            border-top: 2px solid $color-w0;
-            border-right: 2px solid $color-w0;
-            margin-top: 1px;
-            margin-left: var(--subdiv);
-        }
+    &:hover {
+      background: linear-gradient(
+          180deg,
+          #f8f8f8 15.1%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #ffffff;
     }
-    &.bordered{
-        border: 1px solid $color-d0;
+  }
+  &.green {
+    background-color: $color-a0;
 
-        > p{
-            @include light-text();
-            color: $color-d0-1;
-        }
-        &:hover{
-            background-color: $color-d0;
-
-            > p{
-                color: $color-w0;
-            }
-        }
+    &:hover {
+      background-color: $color-a0-2;
     }
-    &.white{
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 15.1%, #F8F8F8 100%), #FFFFFF;
-        box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
+  }
+  &.dark {
+    background-color: $color-d0;
 
-        > p{
-            color: $color-d0;
-            font-weight: 400;
-        }
-        &:hover{
-            background: linear-gradient(180deg, #F8F8F8 15.1%,rgba(255, 255, 255, 0) 100%), #FFFFFF;
-        }
+    &:hover {
+      background-color: $color-d3;
     }
-    &.green{
-        background-color: $color-a0;
-
-        &:hover{
-            background-color: $color-a0-2;
-        }
-    }
-    &.dark{
-        background-color: $color-d0;
-
-        &:hover{
-            background-color: $color-d3;
-        }
-    }
+  }
 }

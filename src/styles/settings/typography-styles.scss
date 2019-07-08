@@ -1,49 +1,57 @@
+@import "fonts.scss";
 @import "typography-styles-mixins.scss";
 
-
-.logo-text{
+.logo-text {
   @include logo-text();
 }
-.regular-text{
+.regular-text {
   @include regular-text();
 }
-.small-text{
+.small-text {
   @include small-text();
 }
-.light-text{
+.light-text {
   @include light-text();
 }
-.button-text{
+.button-text {
   @include button-text();
 }
-.input-button-text{
+.input-button-text {
   @include input-button-text();
 }
-.title1{
+.title1 {
   @include title1();
 }
-.sub-title1{
+.sub-title1 {
   @include sub-title1();
 }
-.title2{
+.title2 {
   @include title2();
 }
-.title3{
+.title3 {
   @include title3();
 }
-.content-title{
+.content-title {
   @include content-title();
 }
-.content-paragraph{
+.content-paragraph {
   @include content-paragraph();
 }
-.content-paragraph2{
+.content-paragraph2 {
   @include content-paragraph2();
 }
-.input-text{
+.input-text {
   @include footer-text();
 }
-h1, h2,h3,h4,h5,h6,p,li,a{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a {
   -webkit-font-smoothing: antialiased;
 }
 // p, li {
