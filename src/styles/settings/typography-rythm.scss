@@ -1,0 +1,70 @@
+// @function clean-unit($value) {
+//   @return $value / ($value * 0 + 1);
+// }
+
+// @function font-space($font-size, $leading) {
+//   $text-body-height:72;
+//   $top-space-big-font:10;
+//   $top-space-small-font:5;
+
+//   $text-size-base: 100; //Default Size For mesurment
+//   $letter-height-base: $text-body-height;
+//   $line-height-base: 100; //Default Size For mesurment
+//   $top-space: if($font-size <= 18, $top-space-small-font, $top-space-big-font);
+//   $white-space-base-px: $line-height-base - $letter-height-base;
+
+//   $letter-size-px: round(clean-unit($font-size) / $text-size-base * $letter-height-base); //px
+//   $one-pers-lh: $leading / 100; //%
+//   $white-space: 100 - $letter-size-px / $one-pers-lh;
+//   $white-space-one-pers: ($white-space * $one-pers-lh) / 100; // 1%
+//   $t: $top-space / ($white-space-base-px / 100);
+//   $b: ($white-space-base-px - $top-space) / ($white-space-base-px / 100);
+//   $space-top-px: round($t * $white-space-one-pers);
+//   $space-bottom-px: round($b * $white-space-one-pers);
+
+//   $result-top: ($space-top-px + $letter-size-px) * 1px;
+//   @while ($result-top % clean-unit(var(--subdiv)) != 0) {
+//     $result-top: $result-top + 1
+//   }
+
+//   $result-bottom: $space-bottom-px * 1px;
+//   @while ($result-bottom % clean-unit(var(--subdiv)) != 0) {
+//     $result-bottom: $result-bottom + 1
+//   }
+
+//   @return $result-top - ($space-top-px + $letter-size-px) 0px ($result-bottom - $space-bottom-px) 0px;
+
+// }
+
+// @function line-height($f-size, $Leading) {
+//   @return round(($f-size * $Leading)/$subdiv)*$subdiv;
+// }
+
+//@mixin font($f-family, $f-weight, $f-size, $l-spacing, $l-height, $case) {
+//  $line-h:line-height($f-size, $l-height);
+//  font: $f-weight #{$f-size}/#{$line-h} $f-family, sans-serif, open-sans;
+//  letter-spacing: $l-spacing;
+//  text-transform: $case;
+//  padding: font-space($f-size, $line-h);
+//}
+
+@mixin font($f-family, $f-weight, $f-size, $l-spacing, $l-height, $case) {
+  font: $f-weight #{$f-size}/#{$l-height} $f-family, sans-serif, open-sans;
+  letter-spacing: $l-spacing;
+  text-transform: $case;
+}
+
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+

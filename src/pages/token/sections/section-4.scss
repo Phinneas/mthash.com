@@ -1,0 +1,81 @@
+> .section-4{
+    height: fit-content;
+    width: 100%;
+    max-width: 1170px;
+    margin: calc(var(--baseline) * 7) auto;
+
+    > .content{
+        display: flex;
+        width: 100%;
+
+        > .text-pair-wrapper{
+            width: 45%;
+
+            > .text-pair-1{
+                max-width: calc(var(--baseline) * 17 + var(--subdiv));
+            }
+        }
+        > .transaction-form{
+            $padding: calc(var(--baseline) * 2 - var(--subdiv));
+            width: calc(55% - #{$padding} * 2);
+            background: $color-w0;
+            padding: $padding;
+            box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
+
+            > .inputs-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+
+                > .input-group{
+                    width: calc(50% - var(--baseline) / 2);
+                    display: flex;
+                    flex-direction: column;
+                    min-width: unset;
+                    box-shadow: unset;
+                    margin-bottom: var(--baseline);
+
+                    > .title{
+                        margin-bottom: calc(var(--subdiv) * 2);
+                        display: flex;
+                        justify-content: space-between;
+                        -webkit-user-select: none;
+                        user-select: none;
+
+                        > .tint{
+                            display: flex;
+
+                            > p{
+                                @include small-text();
+
+                                &.sub{
+                                    color: $color-d4;
+                                    margin-left: var(--subdiv);
+                                }
+                            }
+                        }
+                        > h4{
+                            @include footer-text();
+                        }
+                    }
+                    &:nth-child(2n){
+                        margin-left: var(--baseline);
+                    }
+                }
+            }
+            > .terms-of-use{
+                margin: var(--baseline) auto 0 auto;
+                @include content-paragraph();
+                color: $color-d4;
+                text-align: center;
+                cursor: default;
+                -webkit-user-select: none;
+                user-select: none;
+
+                > *{
+                    color: $color-d0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

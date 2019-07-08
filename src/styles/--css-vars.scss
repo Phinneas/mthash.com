@@ -1,0 +1,76 @@
+@import "--scss-vars.scss";
+
+body { 
+//typography-scale css vars
+        --font-size2: #{$font-size2};
+        --font-size1: #{$font-size1};
+        --font-size3: #{$font-size3};
+        --font-size4: #{$font-size4};
+        --font-size5: #{$font-size5};
+        --font-size6: #{$font-size6};
+        --font-size7: #{$font-size7};
+        --font-size8: #{$font-size8};
+        --font-size9: #{$font-size9};
+        --font-size10: #{$font-size10};
+        --font-size11: #{$font-size10};
+        --font-size12: #{$font-size12};
+        --font-size13: #{$font-size13};
+        --font-size14: #{$font-size14};
+        
+        --font-base: 16px;
+        --baseline: 27px;
+        --subdiv: 5px;
+        --column-width: 50px;
+        --gutter: 25px;
+        --input-side-padding: 4px;
+        --group-padding: 20px;
+
+@-moz-document url-prefix() {
+        --font-size2: #{$font-size2};
+        --font-size1: #{$font-size1};
+        --font-size3: #{$font-size3};
+        --font-size4: #{$font-size4};
+        --font-size5: #{$font-size5};
+        --font-size6: #{$font-size6};
+        --font-size7: #{$font-size7};
+        --font-size8: #{$font-size8};
+        --font-size9: #{$font-size9};
+        --font-size10: #{$font-size10};
+        --font-size11: #{$font-size10};
+        --font-size12: #{$font-size12};
+        --font-size13: #{$font-size13};
+        --font-size14: #{$font-size14};
+        
+}
+
+//grid css vars
+        --column1: #{$column1};
+        --column2: #{$column2};
+        --column3: #{$column3};
+        --column4: #{$column4};
+        --column5: #{$column5};
+        --column6: #{$column6};
+        --column7: #{$column7};
+        --column8: #{$column8};
+        --column9: #{$column9};
+        --column10: #{$column10};
+        --column11: #{$column11};
+        --column12: #{$column12};
+
+//h-divisions
+        --h-division1: 81px;
+        --h-division2: 189px;
+        --h-division3: 297px;
+        --h-division4: 405px;
+        --h-division5: 513px;
+        --h-division6: 621px;
+
+//spacers:
+        --spacer1: 27px;
+        --spacer2: 54px;
+        --spacer3: 81px;
+        --spacer4: 108px;
+        --spacer5: 135px;
+        --spacer6: 162px;
+
+}

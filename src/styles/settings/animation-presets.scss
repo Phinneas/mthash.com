@@ -1,0 +1,358 @@
+@import "animation.scss";
+@mixin text-animation($x:0px, $y:0px, $opacity:0, $time:1s, $delay:0s, $function1:$ease-out-apple1, $function2:$ease-out-apple2) {
+  opacity: $opacity;
+  transform: translate($x, $y);
+  transition: transform $time*1.2 $function1 $delay, opacity $time $function2 $delay;
+}
+
+:host {
+  @media only screen and (max-width: $brake5) and (min-width: $brake-end) {
+    .transition.y-axis.enter.delay2, .transition.y-axis.enter.delay3, .transition.y-axis.enter.delay4, .transition.y-axis.enter.delay5, .transition.y-axis.enter.delay6, .transition.y-axis.enter.delay7, .transition.y-axis.enter.delay8{
+      transition-delay: $delay1 !important;
+    }
+  }
+
+  //Fix for Ipad scroll
+  .main-wrapper {
+    @media (pointer: fine) {
+      height: 100vh;
+      overflow-x: hidden;
+      -webkit-perspective: 1px;
+      perspective: 1px;
+    }
+  }
+
+  //Fix for mozilla scroll
+  @-moz-document url-prefix() {
+    .main-wrapper {
+      height: 100vh;
+      overflow-x: hidden;
+      -webkit-perspective: 1px;
+      perspective: 1px;
+    }
+  }
+
+
+  //scrolling bottom or unchanged on both sides
+
+  .transition.y-axis.enter.delay1 {
+    transition-delay: $delay1;
+  }
+  .transition.y-axis.enter.delay2 {
+    transition-delay: $delay2;
+  }
+  .transition.y-axis.enter.delay3 {
+    transition-delay: $delay3;
+  }
+  .transition.y-axis.enter.delay4 {
+    transition-delay: $delay4;
+  }
+  .transition.y-axis.enter.delay5 {
+    transition-delay: $delay5;
+  }
+  .transition.y-axis.enter.delay6 {
+    transition-delay: $delay6;
+  }
+  .transition.y-axis.enter.delay7 {
+    transition-delay: $delay7;
+  }
+  .transition.y-axis.enter.delay8 {
+    transition-delay: $delay8;
+  }
+
+  //transition y-axis BOTTOM
+  .transition.y-axis {
+    will-change: transform, opacity;
+    @include text-animation(0px, 60px);
+  }
+  .transition.y-axis.enter {
+    @include text-animation(0px, 0px, 1);
+  }
+  .transition.y-axis.exit {
+    @include text-animation(0px, -60px, 0);
+  }
+
+  //transition right both sides
+  .transition.x-right, .transition.x-right.exit {
+    will-change: transform, opacity;
+    @include text-animation(-100px, 0px);
+  }
+  .transition.x-right.enter {
+    @include text-animation(0px, 0px, 1);
+  }
+
+  //transition left both sides
+  .transition.x-left, .transition.x-left.exit {
+    will-change: transform, opacity;
+    @include text-animation(100px, 0px);
+  }
+  .transition.x-left.enter {
+    @include text-animation(0px, 0px, 1);
+  }
+
+
+  .transition.opacity.enter.delay8 {
+    transition-delay: $delay8;
+  }
+  //opacity animation
+  .transition.opacity, .transition.opacity.exit {
+    will-change: transform, opacity;
+    opacity: 0;
+    transition: opacity .8s $ease-out-cubic 0.3s;
+    &:after {
+      transform: scaleY(1);
+    }
+  }
+  .transition.opacity.enter {
+    opacity: 1;
+    transition: opacity 2s $ease-out-cubic 0.3s;
+    &:after {
+      transform: scaleY(1);
+    }
+  }
+  //divider after --column1
+  .transition.divider-width-left-to-right, .transition.transition.divider-width-left-to-right.exit {
+    &:after {
+      will-change: transform, opacity;
+      width: 0;
+      transition: width .5s $ease-out-cubic 0s;
+    }
+  }
+  .transition.transition.divider-width-left-to-right.enter {
+    &:after {
+      width: var(--column1);
+    }
+  }
+  //divider before 100%
+  .transition.divider-width, .transition.divider-width.exit {
+    &:before {
+      will-change: transform, opacity;
+      width: 0;
+      transition: width 2.5s $ease-out-quart 0s;
+    }
+  }
+  .transition.divider-width.enter {
+    &:before {
+      width: 100%;
+    }
+  }
+
+  .transition.divider-tack, .transition.divider-tack.exit {
+    width: 0;
+    will-change: transform, opacity;
+    transition: width 2.5s $ease-out-quart 0s;
+  }
+  .transition.divider-tack.enter {
+    width: 100%;
+  }
+
+
+  .transition.divider-top-to-bottom, .transition.divider-top-to-bottom.exit {
+    will-change: transform, opacity;
+    transition: all 1.2s cubic-bezier(0.16, 0, 0.55, 1);
+    max-height: 0;
+  }
+  .transition.divider-top-to-bottom.enter {
+    max-height: 500px;
+  }
+
+
+  /*.transition.widthLeftToRight, .transition.widthLeftToRight.exit{
+    width: 0;
+    transition: width .5s $ease-out-cubic 0s;
+  }
+  .transition.widthLeftToRight.enter {
+    width: 100%;
+  }*/
+
+  //photo animations:
+  //photo animation TransitionLeft
+  .transition.photo-transition-left, .transition.photo-transition-left.exit {
+    clip: rect(0px, 0px, 1000px, 0px);
+    opacity: 0;
+    transition: clip 2.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 0.5s $ease-out-apple1 0s;
+  }
+  .transition.photo-transition-left.enter {
+    clip: rect(0px, 1250px, 1000px, 0px);
+    opacity: 1;
+    transition: clip 3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 0.6s $ease-out-apple1 0s
+  }
+
+  //section transition to top
+  .transition.section-top {
+    will-change: transform, opacity;
+    opacity: 0.01;
+    transform: translate(0, 100px);
+    transition: opacity 1000ms $ease-out-appleSection, transform 1000ms $ease-out-appleSection;
+  }
+  .transition.section-top.enter {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  .transition.section-top.exit {
+    opacity: 0.01;
+    transform: translate(0, -100px);
+  }
+
+  .transition.markers-transition, .transition.markers-transition.exit {
+    img:nth-child(2) {
+      will-change: transform, opacity;
+      opacity: 0;
+      transition: opacity 1.6s $ease-out-appleSection 0.5s;
+    }
+    img:nth-child(1) {
+      opacity: 0;
+      transition: opacity 1.2s $ease-out-appleSection 1.5s;
+    }
+  }
+  .transition.markers-transition.enter {
+    img:nth-child(2) {
+      opacity: 1;
+    }
+    img:nth-child(1) {
+      opacity: 1;
+    }
+  }
+
+  //composing marring animation
+  .transition.comp-mapping {
+    img:nth-child(1) {
+      will-change: transform, opacity;
+      @include text-animation(0px, 60px);
+      transition: all 1.2s $ease-out-cubic 0s;
+    }
+    img:nth-child(2) {
+      opacity: 0;
+      transition: opacity 1.2s $ease-out-cubic 0.3s;
+    }
+  }
+  .transition.comp-mapping.enter {
+    img:nth-child(1) {
+      @include text-animation(0px, 0px, 1);
+      transition: all 1.2s $ease-out-cubic 0s;
+    }
+    img:nth-child(2) {
+      opacity: 1;
+      transition: opacity 1.2s $ease-out-cubic 0.3s;
+    }
+  }
+  .transition.comp-mapping.exit {
+    img:nth-child(1) {
+      @include text-animation(0px, -60px);
+      transition: all 1.2s $ease-out-cubic 0s;
+    }
+    img:nth-child(2) {
+      opacity: 0;
+      transition: opacity 1.2s $ease-out-cubic 0.3s;
+    }
+  }
+
+  //triangles animation
+  .main-wrapper .floating-shape {
+    //left triangles
+    .transition.triangles-left, .transition.triangles-left.exit {
+      will-change: transform, opacity;
+      transform: translateX(-100%) rotate(45deg);
+      transition: transform 1s $ease-out-appleSection 0.5s;
+    }
+    .transition.triangles-left.enter {
+      transform: translateX(0) rotate(45deg);
+    }
+    //right triangles
+    .transition.triangles-right, .transition.triangles-right.exit {
+      will-change: transform, opacity;
+      transform: translateX(100%) rotate(45deg);
+      transition: transform 1s $ease-out-appleSection 0.5s;
+    }
+    .transition.triangles-right.enter {
+      transform: translateX(0) rotate(45deg);
+    }
+  }
+
+  //pop-in
+  .transition.pop-in, .transition.pop-in.exit {
+    will-change: transform, opacity;
+    opacity: 0;
+    transform: scale(0.8) translate(0, 20px);
+    transition: all 1.2s cubic-bezier(0.16, 0, 0.55, 1);
+  }
+  .transition.pop-in.enter {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+  }
+
+  @media only screen and (max-width: $brake5) and (min-width: $brake-end) {
+    .transition.photo-transition-left, .transition.x-right, .transition.x-left {
+      will-change: transform, opacity;
+      @include text-animation(0px, 60px);
+    }
+    .transition.photo-transition-left.enter, .transition.x-right.enter, .transition.x-left.enter {
+      @include text-animation(0px, 0px, 1);
+    }
+    .transition.photo-transition-left.exit, .transition.x-right.exit, .transition.x-left.exit {
+      @include text-animation(0px, -60px, 0);
+    }
+  }
+}
+
+:host([scrolling-top]) {
+
+  .transition.y-axis {
+    will-change: transform, opacity;
+    @include text-animation(0px, -60px);
+  }
+  .transition.y-axis.enter {
+    @include text-animation(0px, 0px, 1);
+  }
+
+  .transition.y-axis.exit {
+    @include text-animation(0px, 60px, 0);
+  }
+
+  .transition.section-top {
+    will-change: transform, opacity;
+    opacity: 0.01;
+    transform: translate(0, -100px);
+    transition: opacity 1000ms $ease-out-appleSection, transform 1000ms $ease-out-appleSection;
+  }
+  .transition.section-top.enter {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  .transition.section-top.exit {
+    opacity: 0.01;
+    transform: translate(0, 100px);
+  }
+
+  .transition.comp-mapping {
+    img:nth-child(1) {
+      will-change: transform, opacity;
+      @include text-animation(0px, -60px);
+      transition: all 1.2s $ease-out-cubic 0s;
+    }
+    img:nth-child(2) {
+      opacity: 0;
+      transition: opacity 1.2s $ease-out-cubic 0.3s;
+    }
+  }
+  .transition.comp-mapping.enter {
+    img:nth-child(1) {
+      @include text-animation(0px, 0px, 1);
+      transition: all 1.2s $ease-out-cubic 0s;
+    }
+    img:nth-child(2) {
+      opacity: 1;
+      transition: opacity 1.2s $ease-out-cubic 0.3s;
+    }
+  }
+  .transition.comp-mapping.exit {
+    img:nth-child(1) {
+      @include text-animation(0px, 60px);
+      transition: all 1.2s $ease-out-cubic 0s;
+    }
+    img:nth-child(2) {
+      opacity: 0;
+      transition: opacity 1.2s $ease-out-cubic 0.3s;
+    }
+  }
+}

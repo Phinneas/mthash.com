@@ -1,0 +1,35 @@
+.section-1{
+    height: fit-content;
+    width: calc(100% - var(--baseline) * 12);
+    padding: 0 calc(var(--baseline) * 6);
+
+    > .title1{
+        text-align: center;
+        margin-top: calc(var(--baseline) * 5);
+        margin-bottom: calc(var(--baseline) * 10 - var(--subdiv));
+    }
+    > .card{
+        margin-bottom: calc(var(--baseline) * 3 + var(--subdiv) * 2);
+        
+        > .text-wrapper{
+            width: 24%;
+            padding-right: 10%;
+            margin-left: auto;
+            
+
+            > .title, > .text{
+                width: 72%;
+            }
+        }
+        > .illustrations-wrapper{
+            width: 44%;
+            position: relative;
+            margin-right: auto;
+
+            > img{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}

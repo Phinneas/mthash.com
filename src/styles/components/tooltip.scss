@@ -1,0 +1,134 @@
+@import  '../--scss-vars.scss';
+// @import "../../../components/reset-component.scss";
+
+$tooltipBg: transparent;
+$transitionTime: $time3 $ease-in-out-cubic;
+$triangleSize: 6px;
+
+$distanceToTooltip: $triangleSize / 2;
+
+//instruction: in element you should write:  tip="direction" data-description="tooltip hint"
+
+[tip]{
+  position: relative;
+}
+
+[tip]:before {
+  content:attr(data-description);
+  width: fit-content;
+  visibility:hidden;
+  background: $color-b4;
+  color: $color-w0;
+  z-index: 99;
+  white-space: pre;
+  opacity:0;
+  transition:$transitionTime;
+  padding: 0 $triangleSize*0.9;
+  position: absolute;
+  @extend [tip~=top]:before;
+  @include small-text();
+}
+
+[tip]:hover:before {
+    opacity:1;
+    visibility:visible;
+    transition: $time3 $ease-in-out-cubic $time3;
+}
+
+
+[tip~=top]:before{
+    top:-$distanceToTooltip -$triangleSize;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+[tip~=bottom]:before{
+    bottom: -$distanceToTooltip -$triangleSize;
+    left: 50%;
+    top: unset;
+    transform: translate(-50%, 100%);
+}
+
+[tip~=left]:before{
+    top: 50%;
+    left:-$distanceToTooltip -$triangleSize;
+    transform: translate(-100% , -50%);
+}
+
+[tip~=right]:before{
+    right: -$distanceToTooltip -$triangleSize;
+    left: unset;
+    top: 50%;
+    transform: translate(100%, -50%);
+}
+
+[tip~=top-right]:before{
+    top:-$distanceToTooltip -$triangleSize;
+    left: unset;
+    right: 0;
+    transform: translate(50%, -100%);
+}
+
+[tip]:after {
+    content:'';
+    visibility:hidden;
+    position:absolute;
+    border-left:$triangleSize solid transparent;
+    border-right:$triangleSize solid transparent;
+    border-top:$triangleSize solid $color-b4;
+    margin-left:-$triangleSize;
+    height:0;
+    width:0;
+    transition:$transitionTime;
+    opacity:0;
+    @extend [tip~=top]:after;
+    }
+
+[tip]:hover:after {
+    opacity:1;
+    visibility:visible;
+    transition: $time3 $ease-in-out-cubic $time3;
+}
+
+[tip~=top]:after{
+    top:-$distanceToTooltip -$triangleSize;
+    left: 50%;
+    transform: translate(0, 0);
+}
+[tip~=left]:after{
+    top: 50%;
+    left:-$distanceToTooltip -$triangleSize;
+    transform: rotate(-90deg) translate(25%, $triangleSize/2);
+}
+
+[tip~=right]:after{
+    left: unset;
+    right: -$distanceToTooltip -$triangleSize;
+    top: 50%;
+    transform:rotate(90deg) translate(-25%, -$triangleSize/2-1px);
+}
+
+[tip~=bottom]:after{
+    top:unset;
+    bottom: -$distanceToTooltip -$triangleSize;
+    left: 50%;
+    transform:rotate(180deg) translate(0, 0);
+}
+
+[tip~=top-right]:after{
+    top:-$distanceToTooltip -$triangleSize;
+    left: unset;
+    right: 0%;
+}
+
+[tip~=bright]:before{
+    color: $color-d0;
+    background: $color-d6;
+}
+[tip~=bright]:after{
+    border-top-color: $color-d6;
+}
+
+[data-description=""]:hover:after,[data-description=""]:hover:before{
+    visibility:hidden;
+}

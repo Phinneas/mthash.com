@@ -1,0 +1,13 @@
+@import  '../--scss-vars.scss';
+
+.text-pair-1{
+    >h1{
+        @include title2();
+        line-height: 1.6;
+    }
+    >p{
+        @include content-paragraph();
+        margin-top: calc(var(--baseline));
+        color: $color-d4;
+    }
+}

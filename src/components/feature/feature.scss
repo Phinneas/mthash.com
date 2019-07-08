@@ -1,0 +1,33 @@
+@import '../../styles/--scss-vars.scss';
+
+.feature-wrapper{
+    > .title-wrapper{
+        display: flex;
+        align-items: center;
+        margin-bottom: calc(var(--subdiv) * 3);
+
+        > .icon{
+            $icon-size: calc(var(--subdiv) * 10);
+            height: $icon-size;
+            width: $icon-size;
+            border-radius: 5px;
+            background-color: $color-d0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: calc(var(--subdiv) * 3);
+            flex-shrink: 0;
+
+            > img{
+                display: block;
+            }
+        }
+        > .title{
+            @include content-title();
+        }
+    }
+    > .text{
+        @include content-paragraph();
+        color: $color-d4;
+    }
+}

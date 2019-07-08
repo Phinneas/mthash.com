@@ -1,0 +1,156 @@
+.section-1{
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
+    > .title1{
+        text-align: center;
+        margin-top: calc(var(--baseline) * 5);
+        margin-bottom: calc(var(--baseline) * 7);
+    }
+    > .distribution-wrapper{
+        height: fit-content;
+        width: calc(100% - var(--baseline) * 6);
+        max-width: calc(1170px - var(--baseline) * 6);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 calc(var(--baseline) * 3);
+        border-radius: 5px;
+        background-color: $color-w0;
+        position: relative;
+        box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
+        overflow: hidden;
+
+        > *{
+            position: relative;
+        }
+        > .bg{
+            @include position(absolute, 0,unset,unset,0);
+            height: 100%;
+            width: 100%;
+        }
+        > h2{
+            margin-top: calc(var(--baseline) + var(--subdiv) * 2);
+            color: $color-d4;
+        }
+        > h1{
+            margin: calc(var(--subdiv) * 2) 0;
+        }
+        > .bar-wrapper{
+            //PHASES//
+            $current-state: 15%;
+            $phase2: 50%;
+            $phase3: 66.6%;
+            $phase4: 83.4%;
+
+            height: fit-content;
+            width: 100%;
+            -webkit-user-select: none;
+            user-select: none;
+
+            h3, p{
+                color: $color-d4;
+            }
+            > h3{
+                margin-bottom: calc(var(--baseline));
+            }
+            > .bar{
+                height: calc(var(--subdiv) * 3);
+                width: 100%;
+                border-radius: 20px;
+                margin-bottom: var(--subdiv);
+                background-image: linear-gradient(to bottom, rgba($color-d0, 0.15) 0%, rgba($color-d0, 0.08) 30%, rgba($color-d0, 0.04) 50%, rgba($color-d0, 0.01) 100%);
+                position: relative;
+
+                > .phase{
+                    height: 100%;
+                    width: 1px;
+                    @include position(absolute, 0,unset,unset,unset);
+                    background-color: $color-d5;
+
+                    &:nth-of-type(1){
+                        left: $phase2;
+                    }
+                    &:nth-of-type(2){
+                        left: $phase3;
+                    }
+                    &:nth-of-type(3){
+                        left: $phase4;
+                    }
+                    &:after{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: var(--subdiv);
+                        background-color: $color-d5;
+                        @include position(absolute, unset,unset,0,unset);
+                        transform: translateY(100%);
+                    }
+                }
+                > .current-state{
+                    height: 100%;
+                    width: $current-state;
+                    border-radius: 20px;
+                    background-color: $color-b0;
+                }
+            }
+            > .mesurements{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+
+                > p{
+                    @include position(absolute, 0,unset,unset,unset);
+                    transform: translateX(-50%);
+
+                    &:nth-of-type(1){
+                        left: $phase2;
+                        color: $color-d5;
+                    }
+                    &:nth-of-type(2){
+                        left: $phase3;
+                        color: $color-d5;
+                    }
+                    &:nth-of-type(3){
+                        left: $phase4;
+                        color: $color-d5;
+                    }
+                }
+                > h3:last-child{
+                    color: $color-d5;
+                }
+            }
+        }
+        > .info-wrapper{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: calc(var(--baseline) * 2 + var(--subdiv));
+
+            > .raw{
+                width: 100%;
+                display: flex;
+                margin-top: calc(var(--subdiv) * 5);
+
+                > .col{
+                    width: 27%;
+
+                    > p{
+                        color: $color-d4;
+                        margin-bottom: var(--subdiv);
+                    }
+                    &:first-child{
+                        width: 32%;
+                    }
+                    &:last-child{
+                        width: 14%;
+                    }
+                }
+            }
+        }
+    }
+}

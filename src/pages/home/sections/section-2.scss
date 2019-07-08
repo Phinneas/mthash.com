@@ -1,0 +1,19 @@
+> .section-2{
+    height: fit-content;
+    width: calc(100% - calc(var(--baseline) * 12));
+    display: flex;
+    padding: 0 calc(var(--baseline) * 6);
+
+    > .card{
+        text-align: center;
+
+        > .content-wrapper{
+            justify-content: center;
+            margin-top: calc(var(--baseline) * 3 + var(--subdiv) * 2);
+
+            > .feature-v2-wrapper{
+                margin: 0 calc(var(--baseline) + var(--subdiv) * 4);
+            }
+        }
+    }
+}

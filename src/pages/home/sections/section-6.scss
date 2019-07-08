@@ -1,0 +1,52 @@
+> .section-6{
+    height: fit-content;
+    width: calc(100% - calc(var(--baseline) * 12));
+    display: flex;
+    padding: 0 calc(var(--baseline) * 6);
+    position: relative;
+    z-index: 2;
+    background-color: #1DE9B6;
+
+    > .card{
+        > .text-wrapper{
+            width: 50%;
+            padding-right: 4%;
+
+            > .title, > .text{
+                width: 60%;
+                color: $color-d0-4;
+            }
+            > .link{
+                display: flex;
+                margin-top: var(--baseline);
+
+                > a{
+                    width: 45%;
+
+                    > img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        > .illustrations-wrapper{
+            width: 50%;
+            position: relative;
+            margin: calc(var(--baseline) * 6 + var(--subdiv) * 2) 0;
+
+            > img:first-of-type{
+                @include position(absolute, 0%,42%,unset,unset);
+                width: 33%;
+            }
+            > img:last-of-type{
+                @include position(absolute, 44%,0%,unset,unset);
+                width: 58%;
+            }
+            &:after{
+                content: "";
+                display: block;
+                padding-top: 62%;
+            }
+        }
+    }
+}

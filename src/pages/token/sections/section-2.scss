@@ -1,0 +1,36 @@
+> .section-2{
+    width: 100%;
+    padding: calc(var(--baseline) * 4 + var(--subdiv) * 2) 0;
+    background-color: $color-w0;
+    position: relative;
+    z-index: 1;
+
+    > .content-wrapper{
+        width: 100%;
+        max-width: 1170px;
+        margin: auto;
+        display: flex;
+
+        > .left-side, > .right-side{
+            width: 100%;
+        }
+        > .left-side{
+            > h2{
+                color: $color-d4;
+                margin-bottom: calc(var(--subdiv) * 4);
+            }
+        }
+        > .right-side{
+            > .feature-wrapper{
+                margin-left: calc(var(--baseline) * 4);
+
+                &:not(:last-child){
+                    margin-bottom: var(--baseline);
+                }
+            }
+        }
+        &:not(:first-child){
+            margin-top: calc(var(--baseline) * 3);
+        }
+    }
+}

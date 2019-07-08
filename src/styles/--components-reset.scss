@@ -1,0 +1,92 @@
+// @import   '--scss-vars.scss';
+
+// $max-card-width: 1600px;
+// // 
+// // Maksym made. hide video button what is displayable in opera browser
+// // 
+// // html{
+// //     >div{
+// //         display: none;
+// //         // background: red;
+// //     }
+// // }
+// // body{
+// //     overflow-x: hidden;
+// // }
+// // 
+// // Maksym made. hide video button what is displayable in opera browser
+// // 
+
+// // [layout="main"]{
+// .main {
+//     z-index: 1;
+//     background: $color-d8;
+//     background: $background-color;
+//     min-height: 100vh;
+//     // 
+//     // maksym TODO check true way for it issue
+//     // styles for header nav, in mobile it must be mach heighter than inther content
+//     >section:first-child{
+//         z-index: 3; 
+//     }
+//     // 
+//     // 
+//     &[browsertype~=firefox]{
+//         background: $background-color-firefox;
+//     }
+//     // >div:nth-child(1){
+//     //     max-width: $brake2-1;
+//     // }
+//     >.section-header{
+//         max-width: $brake2-1;
+//         margin-top: 0;
+//     }
+//     >section{
+//         z-index: 1;
+//         position: relative;
+//         max-width: 100%;
+//         height: auto;
+//         padding: 0 var(--side-margins);
+//         margin: var(--spacer5) auto;
+//         // opacity: 0;
+//         // @include transition(opacity);
+//         >.content-wrapper{
+//             max-width: $max-card-width;
+//             // width: 100%;
+//             height: auto;
+//             margin: 0 auto;
+//             position: relative;
+//             // overflow: hidden;
+//             @media screen and (min-width: $brake2){
+//                 $max-width-var:$brake1-1;
+//                 max-width:$max-width-var;
+//             }
+//         }
+//         >.card{
+//             z-index: 1;
+//             // overflow: hidden;
+//             box-shadow: $Sh1;
+//             position: relative;
+//             display: flex;
+//             padding: calc(var(--baseline) * 3);
+//             width: auto;
+//             max-width: $max-card-width;
+//             // maksym TODO check max-height
+//             // max-height: 820px; 
+//             height: 100%;
+//             @media screen and (max-width: $brake4){
+//                 flex-direction: column-reverse;
+//                 height: auto;
+//                 // padding: calc(var(--baseline) * 2) calc(var(--subdiv) * 3);
+//                 padding: calc(var(--baseline) + var(--subdiv) * 3) calc(var(--subdiv) * 3);
+//                 >input{
+//                     @include position(absolute,0,0,0,0);
+//                     margin: auto;
+//                 }
+//             }
+//         }
+//         @media screen and (max-width: $brake4){
+//             margin: var(--spacer2) auto;
+//         }
+//     }
+// }

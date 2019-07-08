@@ -1,0 +1,37 @@
+> .section-2{
+    height: fit-content;
+    width: calc(100% - var(--baseline) * 18);
+    padding: calc(var(--baseline) * 6) calc(var(--baseline) * 9);
+    position: relative;
+
+    > .bg{
+        @include position(absolute, 0,unset,unset,0);
+        height: 100%;
+        width: 100%;
+    }
+    > *{
+        position: relative;
+    }
+    > .title, > p{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+    > .title{
+        @include title3();
+        font-weight: 600;
+        color: $color-w0;
+        margin-bottom: calc(var(--subdiv) * 3);
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    > p{
+        @include content-paragraph();
+        color: $color-w0;
+        margin-bottom: calc(var(--baseline) + var(--subdiv));
+    }
+    > .button{
+        width: 17%;
+        margin: auto;
+    }
+}

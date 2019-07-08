@@ -1,0 +1,161 @@
+> .section-3{
+    background: green;
+    height: fit-content;
+    width: 100%;
+
+    > .bg{
+        @include position(absolute, 0,unset,unset,unset);
+        height: 100%;
+        width: 100%;
+    }
+    > .funding-wrapper{
+        width: 100%;
+        max-width: 1170px;
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > .title-wrapper{
+            width: 13%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: calc(var(--baseline) * 4 + var(--subdiv));
+
+            > .logo{
+                width: 100%;
+            }
+            > .title{
+                @include title2();
+                position: absolute;
+                padding-top: calc(var(--subdiv) * 2);
+                -webkit-user-select: none;
+                user-select: none;
+            }
+        }
+        > .quartal-wrapper{
+            width: calc(100% - var(--baseline) * 4);
+            display: flex;
+            flex-direction: column;
+            padding: 0 calc(var(--baseline) * 2);
+            margin-top: calc(var(--baseline) * 3);
+            @include regular-text();
+            -webkit-user-select: none;
+            user-select: none;
+
+            p{
+                color: $color-d4;
+
+                &.active{
+                    color: $color-d0;
+                }
+            }
+            > .title-wrapper{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: calc(var(--subdiv) * 2);
+            }
+            > .time-line{
+                height: calc(var(--baseline) * 2);
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+
+                 > .line{
+                     position: absolute;
+                     height: var(--subdiv);
+                     width: 100%;
+                     background-image: linear-gradient(to bottom, $color-d5 0%, $color-d6 40%, $color-d6 60%, $color-d7 100%);
+
+                     > .current-state{
+                         height: 100%;
+                         width: calc(100% / 8 * 2);
+                         background-color: $color-b0;
+                     }
+                 }
+                 > .dot{
+                     $dot-size: calc(var(--subdiv) * 4);
+
+                     height: 1px;
+                     width: 1px;
+                     margin: 0 calc(#{$dot-size} / 2.5);
+                     position: relative;
+
+                     &:before, &:after{
+                         content: "";
+                         display: block;
+                         border-radius: 100%;
+                         position: absolute;
+                         transform: translate(-50%, -50%);
+                     }
+                     &:before{
+                        height: calc(#{$dot-size} * 1.7);
+                        width: calc(#{$dot-size} * 1.7);
+                        background-color: $color-w0;
+                        box-shadow: 0px 0px 20px -3px rgba($color-d0, 0.5);
+                     }
+                     &:after{
+                        height: $dot-size;
+                        width: $dot-size;
+                        background-color: $color-d4;
+                     }
+                     &.past{
+                         &:before{
+                             background-color: $color-b0;
+                             box-shadow: 0px 7px 10px -5px rgba($color-d0, 0.5);
+                         }
+                         &:after{
+                            background-color: $color-w0;
+                        }
+                     }
+                     &.active{
+                        &:before{
+                            height: calc(#{$dot-size} * 2.6);
+                            width: calc(#{$dot-size} * 2.6);
+                            background-color: $color-w0;
+                        }
+                        &:after{
+                            height: calc(#{$dot-size} * 1.7);
+                            width: calc(#{$dot-size} * 1.7);
+                           background-color: $color-b0;
+                       }
+                    }
+                 }
+            }
+            > .years-wrapper{
+                width: 101.5%;
+                margin-left: -0.75%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: calc(var(--subdiv) * 2);
+            }
+        }
+        > .text-wrapper{
+            width: 49%;
+            margin: calc(var(--baseline) * 2) auto calc(var(--baseline) * 5) auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            > h2{
+                color: $color-d4;
+                margin-bottom: var(--subdiv);
+                font-size: $font-size6;
+            }
+            > h1{
+                margin-bottom: var(--baseline);
+            }
+            > p{
+                @include content-paragraph();
+                margin-bottom: calc(var(--subdiv) * 5);
+                color: $color-d4;
+            }
+        }
+    }
+}
