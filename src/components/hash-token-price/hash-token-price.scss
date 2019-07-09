@@ -2,7 +2,7 @@
 
 .price-wrapper {
   > p {
-    margin-right: calc(var(--subdiv) * 2);
+    margin: 0 calc(var(--subdiv) * 5);
   }
   > .difference-wrapper {
     $arrow-size: var(--subdiv);
@@ -41,21 +41,26 @@
 }
 
 .row-preview {
-  // height: fit-content;
+  position: absolute;
+  bottom: 100px;
   width: 100%;
-  max-width: calc(var(--baseline) * 16 + var(--subdiv));
+  max-width: calc(var(--baseline) * 19 + var(--subdiv));
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 5px;
-  background-color: $color-d0;
+  border-radius: $input-rounding;
+  background-color: $color-w0;
   padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 6);
   overflow: hidden;
   box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
   @include regular-text();
 
+  .title {
+    padding-left: calc(var(--subdiv) * 4);
+  }
+
   p {
-    color: $color-w0;
+    color: $color-d0;
 
     > span {
       color: $color-d4;
@@ -65,22 +70,5 @@
     height: fit-content;
     display: flex;
     align-items: center;
-  }
-  > .title-wrapper,
-  > .price-wrapper {
-    padding-right: calc(var(--subdiv) * 4);
-  }
-  > .title-wrapper {
-    width: 52%;
-
-    > img {
-      margin-right: calc(var(--subdiv) * 3);
-    }
-  }
-  > .price-wrapper {
-    width: 28%;
-  }
-  > .action-wrapper {
-    width: fit-content;
   }
 }

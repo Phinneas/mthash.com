@@ -4,6 +4,7 @@
 
 $font-montserrat: "Montserrat";
 $font-codec-cold-regular: "CodecCold-Regular";
+$font-codec-cold-news: "CodecCold-News";
 
 @mixin logo-text {
   @include font($font-montserrat, 600, var(--font-size5), 0em, 1.3em, none);
@@ -30,7 +31,7 @@ $font-codec-cold-regular: "CodecCold-Regular";
 }
 @mixin light-text {
   @include font(
-    $font-codec-cold-regular,
+    $font-codec-cold-news,
     300,
     var(--font-size3),
     0.02em,

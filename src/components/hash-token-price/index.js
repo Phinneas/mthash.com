@@ -6,7 +6,7 @@ import "./hash-token-price.scss";
 function HashTokenPrice() {
   return (
     <div className="row-preview">
-      <div className="title-wrapper">
+      <div>
         <img
           className="icon"
           src={require("../../assets/img/home/table-icons/icon1.png")}
@@ -24,7 +24,7 @@ function HashTokenPrice() {
         </div>
       </div>
       <div className="action-wrapper">
-        <Button text="Buy" type="green" />
+        <Button text="Buy" type="dark" />
       </div>
     </div>
   );

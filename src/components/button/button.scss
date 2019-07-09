@@ -5,8 +5,8 @@
   width: fit-content;
   width: -moz-fit-content;
   min-width: max-content;
-  padding: calc(var(--subdiv) * 2) calc(var(--subdiv) * 4);
-  border-radius: 5px;
+  padding: calc(var(--subdiv) * 3) calc(var(--subdiv) * 6);
+  border-radius: $button-rounding;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
@@ -92,6 +92,10 @@
   }
   &.dark {
     background-color: $color-d0;
+
+    > p {
+      color: $color-w0;
+    }
 
     &:hover {
       background-color: $color-d3;

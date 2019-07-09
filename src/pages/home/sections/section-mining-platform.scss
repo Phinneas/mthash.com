@@ -1,11 +1,15 @@
-> .section-mining-platform {
+#section-mining-platform {
   height: fit-content;
   width: calc(100% - calc(var(--baseline) * 12));
   display: flex;
   padding: 0 calc(var(--baseline) * 6);
   z-index: 1;
+  background-color: #fbfafb;
 
-  > .card {
+  > .content-wrapper {
+    @include block;
+    margin: auto;
+
     > .title2,
     > .light-text {
       text-align: center;

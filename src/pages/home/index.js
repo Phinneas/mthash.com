@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "../../components/input";
+import EmailGetStarted from "../../components/email-get-started";
 import Button from "../../components/button";
 import MiningTable from "../../components/mining-table";
 import HashTokenPrice from "../../components/hash-token-price";
@@ -7,6 +7,7 @@ import Feature from "../../components/feature";
 import FeatureV2 from "../../components/feature-v2";
 import Subscribe from "../../components/subscribe";
 import headerStates from "../../components/header-states";
+
 import "./home.scss";
 
 export default class HomePage extends React.Component {
@@ -23,54 +24,58 @@ export default class HomePage extends React.Component {
           src={require("../../assets/img/BG-top.png")}
           alt="sry"
         />
-        <section className="section-top">
+        <section id="section-top">
           <h1 className="title1" anchor="slim">
             Token Distributed Hash Power
           </h1>
           <h2 className="sub-title1">Hash the peaks and beyond</h2>
-          <Input
-            type="dark button"
-            buttonText="Get Started"
-            placeholder="Your email address"
-          />
+          <EmailGetStarted />
           <HashTokenPrice />
         </section>
-        <section>
+        <section id="section-mining-table">
           <MiningTable />
         </section>
-        <section className="section-most-accessible">
-          <div className="card type1">
-            <h1 className="title2">
-              The Most Accessible Mining and Exchange Platform
-            </h1>
-            <h2 className="light-text">
-              Scale a mountain of hash power through tokenized mining combined
-              with an exchange
-            </h2>
-            <div className="content-wrapper">
+        <section id="section-most-accessible">
+          <img
+            className="bg"
+            src={require("../../assets/img/home/section-most-accessible/BG.png")}
+            alt="sry"
+          />
+
+          <div class="content-wrapper">
+            <div class="caption-wrapper">
+              <h1 className="title2">
+                The Most Accessible Mining and Exchange Platform
+              </h1>
+              <h2 className="light-text">
+                Scale a mountain of hash power through tokenized mining combined
+                with an exchange
+              </h2>
+            </div>
+            <div className="features-wrapper">
               <FeatureV2
                 type="large"
                 imgName="home/card-1/icon"
-                title="Accessibility"
-                text="Direct value of hash power through smart-contract ownership hosting with market liquidity"
+                title="Accessible"
+                text="Direct value of hash power through smart contract ownership hosting with market liquidity"
               />
               <FeatureV2
                 type="large"
                 imgName="home/card-1/icon2"
-                title="Scalability"
+                title="Scalable"
                 text="A scalable token of hash power that increases with the mining difficulty and overall hash network"
               />
               <FeatureV2
                 type="large"
                 imgName="home/card-1/icon3"
-                title="Transparency"
+                title="Transparent"
                 text="Total platform hashrate and shares from mining shown like a pool with full transparency"
               />
             </div>
           </div>
         </section>
-        <section className="section-mining-platform">
-          <div className="card type1">
+        <section id="section-mining-platform">
+          <div className="content-wrapper">
             <h1 className="title2">
               Grow Your Portfolio by Mining and Trading In One Place
             </h1>
@@ -114,7 +119,7 @@ export default class HomePage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="section-arcade-mining">
+        <section id="section-arcade-mining">
           <div className="background" />
           <div className="card type2" anchor="dark" both="">
             <div className="illustrations-wrapper">
@@ -150,7 +155,7 @@ export default class HomePage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="section-earn-hash-power">
+        <section id="section-earn-hash-power">
           <div className="card type2">
             <div className="text-wrapper">
               <h1 className="title">
@@ -179,7 +184,7 @@ export default class HomePage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="section-mobile-app" anchor="green" both="">
+        <section id="section-mobile-app" anchor="green" both="">
           <div className="card type2">
             <div className="illustrations-wrapper">
               <img
@@ -219,7 +224,7 @@ export default class HomePage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="section-founders-token">
+        <section id="section-founders-token">
           <img
             className="bg"
             src={require("../../assets/img/home/section-founders-token/BG-bottom.png")}
@@ -292,7 +297,7 @@ export default class HomePage extends React.Component {
             </div>
           </div>
           <div className="content-wrapper">
-            <FeatureV2
+            {/* <FeatureV2
               imgName="home/section-founders-token/iconA"
               title="Exclusive Access"
               text="Gain access to the private beta of the mining and exchange platform, mobile app and more"
@@ -306,7 +311,7 @@ export default class HomePage extends React.Component {
               imgName="home/section-founders-token/iconC"
               title="Lifetime Discount"
               text="Get a lifetime discount on mining and trading fees by redeeming Founder’s tokens on your account"
-            />
+            /> */}
           </div>
         </section>
         <Subscribe

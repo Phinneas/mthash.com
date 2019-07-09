@@ -1,14 +1,17 @@
-@import "settings/animation.scss",
-        "settings/breackpoints.scss",
-        "settings/colors.scss",
-        "settings/globals.scss",
-        "settings/grid.scss",
-        "settings/mixins.scss",
-        "settings/shadows.scss",
-        "settings/typography-scale.scss",
-        "settings/typography-rythm.scss",
-        "settings/typography-styles-mixins.scss";
-        // "settings/page-render-animation.scss"
-        
+@import "settings/animation.scss", "settings/breackpoints.scss",
+  "settings/colors.scss", "settings/globals.scss", "settings/grid.scss",
+  "settings/mixins.scss", "settings/shadows.scss",
+  "settings/typography-scale.scss", "settings/typography-rythm.scss",
+  "settings/typography-styles-mixins.scss";
+// "settings/page-render-animation.scss"
+
 $input-side-padding: 4px;
+$input-rounding: 13px;
+$button-rounding: 9px;
+
+@mixin block {
+  box-shadow: 0px 0px 133px -10px rgba($color-d0, 0.2);
+  border-radius: 33px;
+}
+
 // @import 'pages/home-sections/shadows/shadow-animation.scss';
