@@ -1,82 +1,83 @@
-@import '../../styles/--scss-vars.scss';
+@import "../../styles/--scss-vars.scss";
 
-.company-wrapper{
+.company-wrapper {
+  height: fit-content;
+  width: 100%;
+  padding-top: calc(var(--baseline) * 3 + var(--subdiv) * 2);
+  position: relative;
+  overflow: hidden;
+
+  > .bg {
+    @include position(absolute, 0, unset, unset, unset);
+    width: 100%;
+  }
+  > section {
+    position: relative;
+  }
+  .card {
     height: fit-content;
     width: 100%;
-    padding-top: calc(var(--baseline) * 3 + var(--subdiv) * 2);
+    max-width: 1600px;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
 
-    > .bg{
-        @include position(absolute, 0,unset,unset,unset);
-        width: 100%;
-    }
-    > section{
-        position: relative;
-    }
-    .card{
+    &.type1 {
+      background-color: $color-w0;
+      border-radius: 15px;
+      box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
+      flex-direction: column;
+      margin: calc(var(--baseline) * 3) auto 0 auto;
+
+      > .title2 {
+        margin-top: calc(var(--baseline) * 3 + var(--subdiv) * 5);
+      }
+      > .light-text {
+        margin-top: calc(var(--subdiv) * 3);
+        color: $color-d4;
+      }
+      > .content-wrapper {
         height: fit-content;
         width: 100%;
-        max-width: 1600px;
-        position: relative;
         display: flex;
-        align-items: center;
-
-        &.type1{
-            background-color: $color-w0;
-            border-radius: 15px;
-            box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
-            flex-direction: column;
-            margin: calc(var(--baseline) * 3) auto 0 auto;
-
-            > .title2{
-                margin-top: calc(var(--baseline) * 3 + var(--subdiv) * 5)
-            }
-            > .light-text{
-                margin-top: calc(var(--subdiv) * 3);
-                color: $color-d4;
-            }
-            > .content-wrapper{
-                height: fit-content;
-                width: 100%;
-                display: flex;
-                margin-bottom: calc(var(--baseline) * 3 + var(--subdiv) * 5)
-            }
-        }
-        &.type2{
-            margin: auto;
-            padding: calc(var(--baseline) * 2 + var(--subdiv) * 3) 0;
-
-            > .text-wrapper{
-                height: fit-content;
-
-                > .title, > .text{
-                    margin: auto;
-                }
-                > .title{
-                    @include title3();
-                    margin-bottom: var(--baseline);
-
-                    > span{
-                        font-weight: 300;
-                    }
-                }
-                > .text{
-                    @include content-paragraph2();
-                    margin-bottom: calc(var(--subdiv) * 3);
-                }
-            }
-            > .illustrations-wrapper{
-                flex-shrink: 0;
-            }
-        }
+        margin-bottom: calc(var(--baseline) * 3 + var(--subdiv) * 5);
+      }
     }
+    &.type2 {
+      margin: auto;
+      padding: calc(var(--baseline) * 2 + var(--subdiv) * 3) 0;
 
-    @import "./sections/section-1.scss";
-    @import "./sections/section-2.scss";
-    @import "./sections/section-3.scss";
-    @import "./sections/section-4.scss";
-    @import "./sections/section-5.scss";
-    @import "./sections/section-6.scss";
-    @import "./sections/section-7.scss";
+      > .text-wrapper {
+        height: fit-content;
+
+        > .title,
+        > .text {
+          margin: auto;
+        }
+        > .title {
+          @include title3();
+          margin-bottom: var(--baseline);
+
+          > span {
+            font-weight: 300;
+          }
+        }
+        > .text {
+          @include content-paragraph2();
+          margin-bottom: calc(var(--subdiv) * 3);
+        }
+      }
+      > .illustrations-wrapper {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  @import "./sections/section-top.scss";
+  @import "./sections/section-most-accessible.scss";
+  @import "./sections/section-mining-platform.scss";
+  @import "./sections/section-arcade-mining.scss";
+  @import "./sections/section-earn-hash-power.scss";
+  @import "./sections/section-mobile-app.scss";
+  @import "./sections/section-founders-token.scss";
 }

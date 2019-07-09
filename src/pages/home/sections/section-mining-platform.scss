@@ -1,0 +1,49 @@
+> .section-mining-platform {
+  height: fit-content;
+  width: calc(100% - calc(var(--baseline) * 12));
+  display: flex;
+  padding: 0 calc(var(--baseline) * 6);
+  z-index: 1;
+
+  > .card {
+    > .title2,
+    > .light-text {
+      text-align: center;
+    }
+    > .content-wrapper {
+      justify-content: center;
+      align-items: center;
+      margin-top: calc(var(--baseline) * 2 + var(--subdiv));
+
+      > .left-side {
+        height: fit-content;
+        width: 42%;
+
+        > .feature-wrapper {
+          margin: 0 calc(var(--baseline) * 4) calc(var(--subdiv) * 5) 37%;
+        }
+      }
+      > .right-side {
+        height: fit-content;
+        width: 58%;
+        position: relative;
+
+        > img:first-of-type {
+          @include position(absolute, -5%, unset, unset, 0%);
+          width: 70%;
+          z-index: 2;
+        }
+        > img:last-of-type {
+          @include position(absolute, 5%, unset, unset, 23%);
+          width: 60%;
+          z-index: 1;
+        }
+        &:after {
+          content: "";
+          display: block;
+          padding-top: 83%;
+        }
+      }
+    }
+  }
+}

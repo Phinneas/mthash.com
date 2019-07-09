@@ -1,0 +1,104 @@
+> .section-arcade-mining {
+  height: fit-content;
+  width: calc(100% - calc(var(--baseline) * 12));
+  display: flex;
+  padding: 0 calc(var(--baseline) * 6);
+  position: relative;
+  z-index: 0;
+
+  > .background {
+    height: 110%;
+    width: 100%;
+    @include position(absolute, -10%, unset, unset, 0);
+    background-color: #0d101c;
+  }
+  > .card {
+    > .text-wrapper {
+      width: 60%;
+      padding-right: 4%;
+
+      > .title,
+      > .text {
+        width: 72%;
+        color: $color-d0-4;
+
+        &::selection,
+        > *::selection {
+          background-color: rgba($color-w0, 0.25);
+        }
+      }
+      > .logo {
+        width: 35%;
+        margin: auto;
+        margin-bottom: var(--baseline);
+
+        > img {
+          display: block;
+          width: 60%;
+        }
+      }
+      > .title {
+        background: linear-gradient(to bottom, #606ea3 0%, #4e4376 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        > span {
+          &:first-child {
+            @include light-text();
+          }
+        }
+      }
+      p {
+        background: linear-gradient(to bottom, #1a2139 0%, #352b5b 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        mix-blend-mode: screen;
+      }
+      > .link {
+        @include content-paragraph2();
+        font-weight: 500;
+        margin-top: calc(var(--subdiv) * 4);
+        -webkit-user-select: none;
+        user-select: none;
+
+        > a {
+          display: flex;
+          align-items: center;
+
+          &:after {
+            content: "";
+            display: block;
+            height: 6px;
+            width: 6px;
+            transform: rotate(45deg);
+            border-top: 2px solid #353460;
+            border-right: 2px solid #353460;
+            margin-top: 1px;
+            margin-left: calc(var(--subdiv) * 2);
+          }
+        }
+      }
+    }
+    > .illustrations-wrapper {
+      width: 60%;
+      position: relative;
+      margin: calc(var(--baseline) * 6 + var(--subdiv) * 2) 0;
+
+      > img:nth-of-type(1) {
+        @include position(absolute, 0%, unset, unset, 18%);
+        width: 60%;
+        box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
+      }
+      > img:nth-of-type(2) {
+        @include position(absolute, 37%, 0%, unset, unset);
+        width: 57%;
+        box-shadow: 0px 0px 30px -10px rgba($color-d0-4, 0.1);
+      }
+      &:after {
+        content: "";
+        display: block;
+        padding-top: 81%;
+      }
+    }
+  }
+}
