@@ -12,6 +12,7 @@ $button-rounding: 9px;
 @mixin block {
   box-shadow: 0px 0px 133px -10px rgba($color-d0, 0.2);
   border-radius: 33px;
+  width: 1329px;
 }
 
 // @import 'pages/home-sections/shadows/shadow-animation.scss';

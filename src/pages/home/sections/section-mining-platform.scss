@@ -9,19 +9,24 @@
   > .content-wrapper {
     @include block;
     margin: auto;
+    text-align: center;
+
+    > h1 {
+      margin: calc(var(--baseline) * 2 + var(--subdiv)) auto var(--baseline);
+      max-width: 730px;
+    }
 
     > .title2,
     > .light-text {
       text-align: center;
     }
-    > .content-wrapper {
-      justify-content: center;
-      align-items: center;
+    > .features-wrapper {
+      display: flex;
       margin-top: calc(var(--baseline) * 2 + var(--subdiv));
 
       > .left-side {
         height: fit-content;
-        width: 42%;
+        width: 50%;
 
         > .feature-wrapper {
           margin: 0 calc(var(--baseline) * 4) calc(var(--subdiv) * 5) 37%;
@@ -29,17 +34,17 @@
       }
       > .right-side {
         height: fit-content;
-        width: 58%;
+        width: 40%;
         position: relative;
 
         > img:first-of-type {
-          @include position(absolute, -5%, unset, unset, 0%);
-          width: 70%;
+          @include position(absolute, -5%, unset, unset, 22%);
+          width: 90%;
           z-index: 2;
         }
         > img:last-of-type {
-          @include position(absolute, 5%, unset, unset, 23%);
-          width: 60%;
+          @include position(absolute, 5%, unset, unset, 51%);
+          width: 80%;
           z-index: 1;
         }
         &:after {

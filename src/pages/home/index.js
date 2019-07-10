@@ -83,7 +83,8 @@ export default class HomePage extends React.Component {
               Bringing financial freedom and prosperity while creating real
               adoption of cryptocurrency
             </h2>
-            <div className="content-wrapper">
+
+            <div className="features-wrapper">
               <div className="left-side">
                 <Feature
                   imgName="home/card-2/icon"
