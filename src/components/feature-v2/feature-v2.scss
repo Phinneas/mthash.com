@@ -31,7 +31,8 @@
   }
   > .text {
     @include content-paragraph();
-    color: $color-d4;
+    color: $color-d0;
+    padding: calc(var(--subdiv) * 3);
   }
   > .link {
     margin-top: var(--baseline);
@@ -68,14 +69,11 @@
     }
   }
   &.large {
-    > p {
-      padding: 0 30px;
-    }
     > .title {
       margin-top: calc(var(--baseline) + var(--subdiv) * 5);
     }
     > .link {
-      margin-top: calc(var(--baseline) + var(--subdiv) * 5);
+      margin-top: calc(var(--baseline));
     }
   }
   &.withoutLink {

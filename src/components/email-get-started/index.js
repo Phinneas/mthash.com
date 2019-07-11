@@ -11,8 +11,9 @@ function EmailGetStarted({
   className
 }) {
   return (
-    <div className={`wrapper ${className}`}>
+    <div className={`wrapper ${className ? className : ""}`}>
       <Input
+        className="email-input"
         type="dark button"
         buttonText="Get Started"
         placeholder="Your email address"

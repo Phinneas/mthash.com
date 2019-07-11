@@ -147,13 +147,15 @@ export default class HomePage extends React.Component {
             <div className="text-wrapper">
               <div className="logo">
                 <img
-                  src={require("../../assets/img/home/card-3/logo.png")}
+                  src={require("../../assets/img/home/card-3/logo.svg")}
                   alt="sry"
                 />
               </div>
               <h1 className="title">
-                <b>Arcade Mining</b>
-                <span>&trade;</span> <span>with Tokens</span>
+                <span>Arcade Mining</span>
+                <sub className="trademark">&trade;</sub>
+                <br />
+                <span>with Tokens</span>
               </h1>
               <div className="text">
                 <p>

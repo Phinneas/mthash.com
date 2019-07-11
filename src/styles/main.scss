@@ -11,7 +11,7 @@ body {
   height: 100%;
   width: 100%;
   //pseudo adaptation;
-  min-width: $brake2-2 * 1.25;
+  // min-width: $brake2-2 * 1.25;
 
   > #root {
     height: 100%;
@@ -22,7 +22,7 @@ body {
     }
   }
   @media only screen and (max-width: $brake2 - 1px) {
-    zoom: 80%;
+    // zoom: 80%;
     // -moz-transform: scale(0.8);
     // -moz-transform-origin: 50% 0;
   }

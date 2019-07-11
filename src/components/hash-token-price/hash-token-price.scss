@@ -1,8 +1,8 @@
 @import "../../styles/--scss-vars.scss";
 
-.price-wrapper {
+.hash-price-wrapper {
   > p {
-    margin: 0 calc(var(--subdiv) * 5);
+    margin: 0 calc(var(--subdiv) * 6);
   }
   > .difference-wrapper {
     $arrow-size: var(--subdiv);
@@ -41,22 +41,26 @@
 }
 
 .row-preview {
-  position: absolute;
-  bottom: 100px;
+  margin-top: auto;
   width: 100%;
-  max-width: calc(var(--baseline) * 19 + var(--subdiv));
+  margin-bottom: calc(var(--baseline) * 2);
+  max-width: calc(var(--baseline) * 21 + var(--subdiv));
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: $input-rounding;
   background-color: $color-w0;
-  padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 6);
+  padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 8);
   overflow: hidden;
   box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
   @include regular-text();
 
   .title {
     padding-left: calc(var(--subdiv) * 4);
+  }
+
+  > .action-wrapper {
+    padding-left: calc(var(--baseline) * 2);
   }
 
   p {

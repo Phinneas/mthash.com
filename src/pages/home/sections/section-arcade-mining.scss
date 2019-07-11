@@ -1,6 +1,5 @@
 #section-arcade-mining {
   height: fit-content;
-
   position: relative;
   z-index: 0;
 
@@ -16,7 +15,7 @@
     > .text-wrapper {
       width: 60%;
       padding-right: 4%;
-      margin: 0 calc(var(--baseline) * 3) calc(var(--subdiv) * 8);
+      margin: 0 calc(var(--baseline) * 3) calc(var(--baseline) * 4);
 
       > .get-started-button {
         background: linear-gradient(to bottom, #3e4185 0%, #7521df 100%);
@@ -37,7 +36,7 @@
         }
       }
       > .logo {
-        width: 35%;
+        width: 60%;
         margin: auto;
         margin-bottom: var(--baseline);
 
@@ -47,14 +46,27 @@
         }
       }
       > .title {
-        background: linear-gradient(to bottom, #606ea3 0%, #4e4376 100%);
+        background: linear-gradient(to bottom, #606ea3 0%, #4e4376 32%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        @include title3();
 
-        > span {
-          &:first-child {
-            @include light-text();
-          }
+        > .trademark {
+          text-transform: lowercase;
+          @include content-paragraph2();
+          margin: var(--subdiv);
+        }
+
+        > span:first-child {
+          font-size: $font-size9;
+
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        > span:last-child {
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
       .text {

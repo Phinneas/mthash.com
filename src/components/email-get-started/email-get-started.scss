@@ -3,11 +3,15 @@
 .wrapper {
   display: flex;
   align-items: center;
-  margin-top: calc(var(--baseline) + var(--subdiv) * 2);
+  margin-top: calc(var(--baseline) + var(--subdiv) * 4);
 
-  .get-started-button {
+  > div > .email-input {
+    padding: calc(var(--subdiv) * 5);
+  }
+
+  > .get-started-button {
     border-radius: $input-rounding;
     margin-left: calc(var(--subdiv) * 2);
-    padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 6);
+    padding: calc(var(--subdiv) * 5) calc(var(--subdiv) * 8);
   }
 }

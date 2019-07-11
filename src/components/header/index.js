@@ -57,7 +57,7 @@ class Header extends React.Component{
                 </ul>
                 <div className="buttons-wrapper">
                     <Link to={{pathname: "/signIn"}}><p>Sign In</p></Link>
-                    <Link to={{pathname: "/signUp"}}><Button text="Get Started" type="bordered"/></Link>
+                    <Link to={{pathname: "/signUp"}}><Button text="Get Started" type="bordered" className="sign-up-button"/></Link>
                 </div>
             </div>
         );

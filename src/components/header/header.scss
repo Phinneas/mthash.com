@@ -73,7 +73,7 @@
       }
       &:hover > a > p,
       &.active > a > p {
-        color: $color-d2;
+        color: $color-d4;
       }
     }
   }
@@ -93,12 +93,13 @@
         cursor: pointer;
 
         &:hover {
-          color: $color-d0;
+          color: $color-d4;
         }
       }
     }
     .button-wrapper {
       margin-right: calc(var(--subdiv) * 3);
+      padding: calc(var(--subdiv) * 2) calc(var(--subdiv) * 3);
     }
   }
   &.active {
@@ -160,6 +161,7 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+
       > .button-wrapper {
         border-color: #474975;
 

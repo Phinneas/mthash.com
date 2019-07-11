@@ -29,7 +29,7 @@
     > .text {
       @include content-paragraph();
       margin-top: calc(var(--subdiv) * 3);
-      color: $color-d4;
+      color: $color-d0;
     }
   }
 }

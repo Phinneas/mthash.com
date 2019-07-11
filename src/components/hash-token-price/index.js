@@ -16,7 +16,7 @@ function HashTokenPrice() {
           Hash Token &nbsp;<span>HASH</span>
         </p>
       </div>
-      <div className="price-wrapper">
+      <div className="hash-price-wrapper">
         <p className="price">$10.73</p>
         <div className="difference-wrapper positive">
           <div className="arrow" />
