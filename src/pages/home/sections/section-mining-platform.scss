@@ -10,6 +10,9 @@
     @include block;
     margin: auto;
     text-align: center;
+    padding-bottom: calc(var(--baseline) * 4);
+    margin-bottom: calc(var(--baseline) * -2.5);
+    background-color: #fff;
 
     > h1 {
       margin: calc(var(--baseline) * 2 + var(--subdiv)) auto var(--baseline);
@@ -27,24 +30,22 @@
       > .left-side {
         height: fit-content;
         width: 50%;
-
-        > .feature-wrapper {
-          margin: 0 calc(var(--baseline) * 4) calc(var(--subdiv) * 5) 37%;
-        }
+        padding-left: calc(var(--baseline) * 3);
+        box-sizing: border-box;
       }
       > .right-side {
         height: fit-content;
-        width: 40%;
+        width: 50%;
         position: relative;
 
         > img:first-of-type {
-          @include position(absolute, -5%, unset, unset, 22%);
-          width: 90%;
+          @include position(absolute, -5%, unset, unset, 10%);
+          width: 79%;
           z-index: 2;
         }
         > img:last-of-type {
-          @include position(absolute, 5%, unset, unset, 51%);
-          width: 80%;
+          @include position(absolute, 5%, unset, unset, 42%);
+          width: 69%;
           z-index: 1;
         }
         &:after {

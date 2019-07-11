@@ -1,22 +1,22 @@
 #section-mobile-app {
   height: fit-content;
-  width: calc(100% - calc(var(--baseline) * 12));
-  display: flex;
-  padding: 0 calc(var(--baseline) * 6);
   position: relative;
   z-index: 2;
   background-color: #1de9b6;
+  // overflow: hidden;
+
+  > .bg {
+    @include position(absolute, 0, unset, unset, unset);
+    width: 100%;
+    max-height: $top-bg-height;
+    height: 840px;
+  }
 
   > .card {
     > .text-wrapper {
-      width: 50%;
       padding-right: 4%;
+      margin: 0 calc(var(--baseline) * 5) calc(var(--subdiv) * 8);
 
-      > .title,
-      > .text {
-        width: 60%;
-        color: $color-d0-4;
-      }
       > .link {
         display: flex;
         margin-top: var(--baseline);

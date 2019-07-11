@@ -1,47 +1,33 @@
 #section-earn-hash-power {
   height: fit-content;
-  width: calc(100% - calc(var(--baseline) * 12));
-  display: flex;
-  padding: 0 calc(var(--baseline) * 6);
-  background-color: $color-d7;
+
+  > .bg {
+    @include position(absolute, 0, unset, unset, unset);
+    width: 100%;
+    max-height: $top-bg-height;
+    height: 1229px;
+    opacity: 0.2;
+  }
 
   > .card {
     > .text-wrapper {
-      width: 43%;
       padding-left: 3%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
       text-align: right;
+      margin: 0 calc(var(--baseline) * 3) calc(var(--subdiv) * 8);
 
-      > .title,
-      > .text {
-        width: 63%;
+      h1 {
+        margin: calc(var(--baseline)) 0;
       }
-      > .text {
-        color: $color-d4;
+
+      > p {
+        margin-left: calc(var(--baseline) * 3);
       }
-      > .link {
-        @include content-paragraph2();
-        font-weight: 500;
-        margin-top: calc(var(--subdiv) * 4);
-        -webkit-user-select: none;
-        user-select: none;
 
-        a {
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-
-          &:after {
-            content: "";
-            display: block;
-            height: 6px;
-            width: 6px;
-            transform: rotate(45deg);
-            border-top: 2px solid $color-d0;
-            border-right: 2px solid $color-d0;
-            margin-top: 1px;
-            margin-left: calc(var(--subdiv) * 2);
-          }
-        }
+      > .get-started-button {
+        margin-top: calc(var(--baseline));
       }
     }
     > .illustrations-wrapper {
@@ -50,7 +36,7 @@
       margin: calc(var(--baseline) * 6 + var(--subdiv) * 2) 0;
 
       > img:first-of-type {
-        @include position(absolute, 24%, unset, unset, 10%);
+        @include position(absolute, 13%, unset, unset, 20%);
         width: 80%;
       }
       > img:last-of-type {

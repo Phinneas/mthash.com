@@ -4,10 +4,12 @@
   position: relative;
   z-index: 1;
   padding-bottom: calc(var(--baseline) * 4);
+  background: linear-gradient(214deg, #fff 11%, #fcfbfc 100%);
 
   > .bg {
     @include position(absolute, unset, unset, 0, unset);
     width: 100%;
+    height: 1505px;
   }
   > .table-wrapper {
     width: 100%;
@@ -16,28 +18,10 @@
     margin-top: calc(var(--baseline) * 7);
     display: flex;
     align-items: center;
-    border-bottom: 1px solid $color-d5;
     position: relative;
 
-    > .left-column {
-      width: 35%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      > .logo {
-        margin-bottom: calc(var(--baseline) * 2 + var(--subdiv));
-      }
-      > .button-wrapper {
-        padding-top: calc(var(--subdiv) * 3);
-        padding-bottom: calc(var(--subdiv) * 3);
-        width: fit-content;
-        width: -moz-fit-content;
-      }
-    }
     > .right-column {
       width: calc(65% - 1px);
-      border-left: 1px solid $color-d5;
       position: relative;
       padding: 0 0 calc(var(--baseline) * 2 + var(--subdiv) * 3)
         calc(var(--baseline) * 2 + var(--subdiv) * 3);
@@ -96,7 +80,48 @@
       }
     }
   }
-  > .content-wrapper {
+
+  > .become-founder {
+    @include block;
+    margin: auto;
+    position: relative;
+    height: 387px;
+    display: flex;
+    align-items: center;
+
+    > .bg {
+      @include position(absolute, unset, unset, 0, unset);
+      width: 100%;
+      height: 387px;
+    }
+
+    > .content-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto;
+
+      .left {
+        margin-right: calc(var(--baseline) * 11);
+      }
+
+      .right {
+        margin-right: calc(var(--baseline));
+      }
+
+      .title {
+        @include title1();
+      }
+
+      .text {
+        @include content-paragraph();
+        margin: calc(var(--subdiv)) 0 calc(var(--baseline));
+      }
+    }
+  }
+
+  > .features-wrapper {
     width: 100%;
     max-width: $brake2-2;
     margin: auto;

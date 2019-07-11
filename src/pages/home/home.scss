@@ -48,7 +48,6 @@ $top-bg-height: 1130px;
     }
     &.type2 {
       margin: auto;
-      padding: calc(var(--baseline) * 2 + var(--subdiv) * 3) 0;
 
       > .text-wrapper {
         height: fit-content;

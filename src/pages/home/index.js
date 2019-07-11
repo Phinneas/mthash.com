@@ -94,17 +94,17 @@ export default class HomePage extends React.Component {
                 <Feature
                   imgName="home/card-2/icon2"
                   title="Distributed Wealth"
-                  text="Get rewarded for securing the blockchain network and capitalize on your finance by trading"
+                  text="Spread the coinbase of several blockchain networks and capitalize on your finance"
                 />
                 <Feature
                   imgName="home/card-2/icon3"
                   title="Stability Not Volatility"
-                  text="Give true fundamental value to the crypto economy while earning a steady income growing the blockchain network"
+                  text="Give true fundamental value to the cryptoeconomy while earning a steady income"
                 />
                 <Feature
                   imgName="home/card-2/icon4"
                   title="Seamless Experience"
-                  text="Easily transition between mining and trading, use tokens for both the exchange and mining"
+                  text="Easily transition between mining and trading, use the tokens for both mining and trading"
                 />
               </div>
               <div className="right-side">
@@ -121,7 +121,11 @@ export default class HomePage extends React.Component {
           </div>
         </section>
         <section id="section-arcade-mining">
-          <div className="background" />
+          <img
+            className="bg"
+            src={require("../../assets/img/home/card-3/BG.png")}
+            alt="sry"
+          />
           <div className="card type2" anchor="dark" both="">
             <div className="illustrations-wrapper">
               <img
@@ -143,35 +147,49 @@ export default class HomePage extends React.Component {
               <h1 className="title">
                 Arcade Mining<span>&trade;</span> <span>with Tokens</span>
               </h1>
-              <p className="text">
-                Use tokens to mine like playing in an arcade. Each
-                cryptocurrency is like an arcade game you can choose to mine
-                with tokens.
-              </p>
-              <div className="link text">
-                <a href="https://google.com">
-                  <p>Arcade Mining</p>
-                </a>
+              <div className="text">
+                <p>
+                  Use tokens to mine like playing in an arcade. Pick your
+                  favorite coin to mine.
+                </p>
+                <p>
+                  Each cryptocurrency is like an arcade game you can choose to
+                  mine with hash power tokens.
+                </p>
               </div>
+              <Button
+                text="Get Started"
+                type="dark"
+                className="get-started-button"
+              />
             </div>
           </div>
         </section>
-        <section id="section-earn-hash-power">
+        <section id="section-earn-hash-power" anchor="gray" both="">
+          <img
+            className="bg"
+            src={require("../../assets/img/home/card-4/BG.png")}
+            alt="sry"
+          />
           <div className="card type2">
             <div className="text-wrapper">
               <h1 className="title">
-                Earn Hash Power <span>by Trading</span>
+                <b>Earn Hash Power</b>
+                <div>by Trading</div>
               </h1>
               <p className="text">
-                Earn tokens by trading on the exchange and get a discount on
-                trading fees with tokens.
+                Earn hash tokens by trading and mining on the platform at the
+                same time.
               </p>
               <p className="text">
-                Trading fees go into more hash power for the tokens and users.
+                The more tokens being utilized on the mining arcade, the more
+                tokens you earn through trading.
               </p>
-              <div className="link text">
-                <a href="https://google.com">View Exchange</a>
-              </div>
+              <Button
+                text="Get Started"
+                type="dark"
+                className="get-started-button"
+              />
             </div>
             <div className="illustrations-wrapper">
               <img
@@ -186,6 +204,11 @@ export default class HomePage extends React.Component {
           </div>
         </section>
         <section id="section-mobile-app" anchor="green" both="">
+          <img
+            className="bg"
+            src={require("../../assets/img/home/card-5/BG.png")}
+            alt="sry"
+          />
           <div className="card type2">
             <div className="illustrations-wrapper">
               <img
@@ -199,7 +222,8 @@ export default class HomePage extends React.Component {
             </div>
             <div className="text-wrapper">
               <h1 className="title">
-                Mine and Trade Crypto <span>on the Go</span>
+                <b>Mine and Trade Crypto</b> &nbsp;
+                <span>on the Go</span>
               </h1>
               <p className="text">
                 The power of mining and trading in the palm of your hands.
@@ -228,22 +252,10 @@ export default class HomePage extends React.Component {
         <section id="section-founders-token">
           <img
             className="bg"
-            src={require("../../assets/img/home/section-founders-token/BG-bottom.png")}
+            src={require("../../assets/img/home/section-founders-token/BG.png")}
             alt="sry"
           />
           <div className="table-wrapper">
-            <div className="left-column">
-              <div className="logo">
-                <img
-                  src={require("../../assets/img/home/section-founders-token/logo-large.png")}
-                  alt="sry"
-                />
-              </div>
-              <Button
-                text="&nbsp;&nbsp;Buy Tokens&nbsp;&nbsp;"
-                type="white large"
-              />
-            </div>
             <div className="right-column">
               <h2 className="sub-title">Phase 1</h2>
               <h1 className="title">Founder’s Token Offering</h1>
@@ -297,8 +309,32 @@ export default class HomePage extends React.Component {
               </ul>
             </div>
           </div>
-          <div className="content-wrapper">
-            {/* <FeatureV2
+
+          <div className="become-founder">
+            <img
+              className="bg"
+              src={require("../../assets/img/home/section-founders-token/BG-become.png")}
+              alt="sry"
+            />
+
+            <div className="content-wrapper">
+              <div className="left">
+                <h1 className="title">
+                  <b>Become a Founder</b>
+                </h1>
+                <p className="text">Join the Hash Power Revolution</p>
+                <Button text="Buy Now" type="green" />
+              </div>
+              <div className="right">
+                <img
+                  src={require("../../assets/img/home/section-founders-token/logo-large.svg")}
+                  alt="sry"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="features-wrapper">
+            <FeatureV2
               imgName="home/section-founders-token/iconA"
               title="Exclusive Access"
               text="Gain access to the private beta of the mining and exchange platform, mobile app and more"
@@ -312,7 +348,7 @@ export default class HomePage extends React.Component {
               imgName="home/section-founders-token/iconC"
               title="Lifetime Discount"
               text="Get a lifetime discount on mining and trading fees by redeeming Founder’s tokens on your account"
-            /> */}
+            />
           </div>
         </section>
         <Subscribe
