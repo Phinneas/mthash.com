@@ -1,55 +1,67 @@
-@import '../../styles/--scss-vars.scss';
+@import "../../styles/--scss-vars.scss";
 
-.table-raw{
-    height: fit-content;
-    width: calc(100% - var(--baseline) * 4 - var(--subdiv) * 4);
+.table-raw {
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  padding: calc(var(--subdiv) * 4);
+
+  &:first-child {
+    > p {
+      color: $color-d4-2;
+    }
+  }
+
+  &:not(:first-child) {
+    border-top: 1px solid $color-d6;
+  }
+
+  > * {
     display: flex;
     align-items: center;
-    padding: calc(var(--subdiv) * 4) calc(var(--baseline) * 2 + var(--subdiv) * 2);
 
-    > *{
-        display: flex;
-        align-items: center;
+    &:not(:last-child) {
+      padding-right: calc(var(--subdiv) * 4);
+    }
+  }
+  > *:nth-child(1) {
+    width: 27%;
+  }
+  > *:nth-child(2) {
+    width: 20%;
+  }
+  > *:nth-child(3) {
+    width: 17%;
+  }
+  > *:nth-child(4) {
+    width: 9%;
+  }
+  > *:nth-child(5) {
+    width: 16%;
+  }
+  > *:nth-child(6) {
+    width: 6%;
+  }
+  > .title-wrapper {
+    > img {
+      width: 11%;
+      margin-right: calc(var(--subdiv) * 3);
+    }
+    > p {
+      > span {
+        color: $color-d4;
+      }
+    }
+  }
+  > .token-graph-wrapper {
+    > svg {
+      width: 62%;
+    }
+  }
 
-        &:not(:last-child){
-            padding-right: calc(var(--subdiv) * 4);
-        }
-    }
-    > *:nth-child(1){
-        width: 27%;
-    }
-    > *:nth-child(2){
-        width: 20%;
-    }
-    > *:nth-child(3){
-        width: 17%;
-    }
-    > *:nth-child(4){
-        width: 9%;
-    }
-    > *:nth-child(5){
-        width: 16%;
-    }
-    > *:nth-child(6){
-        width: 6%;
-    }
-    &:nth-child(2n){
-        background-color: $color-d7;
-    }
-    > .title-wrapper{
-        > img{
-            width: 11%;
-            margin-right: calc(var(--subdiv) * 3);
-        }
-        > p{
-            > span{
-                color: $color-d4;
-            }
-        }
-    }
-    > .token-graph-wrapper{
-        > svg{
-            width: 62%;
-        }
-    }
+  .action-button {
+    padding: calc(var(--subdiv) * 2) calc(var(--subdiv) * 6);
+    border-color: $color-d4-1;
+  }
 }

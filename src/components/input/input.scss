@@ -1,177 +1,177 @@
-@import '../../styles/--scss-vars.scss';
+@import "../../styles/--scss-vars.scss";
 
-.input-wrapper{
+.input-wrapper {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  input[type="text"] {
     height: fit-content;
     width: 100%;
-    display: flex;
-    position: relative;
+    @include small-text();
+    font-weight: 400;
+    padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 6);
+    color: $color-d0;
+    background-color: #f6f9fc;
+    border-radius: $input-rounding;
 
-    input[type="text"]{
-        height: fit-content;
+    &::placeholder {
+      color: $color-d5;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  }
+  > .icon {
+    display: none;
+  }
+  > .dropdown {
+    display: none;
+  }
+  > .button {
+    display: none;
+  }
+  &[type*="dark"] {
+    > .button {
+      background-color: $color-d0;
+
+      &:hover {
+        background-color: $color-d3;
+      }
+    }
+  }
+  &[type*="green"] {
+    > .button {
+      background-color: $color-a0;
+
+      &:hover {
+        background-color: $color-a0-2;
+      }
+    }
+  }
+  &[type*="button"] {
+    max-width: calc(var(--baseline) * 18 - var(--subdiv));
+    min-width: calc(var(--baseline) * 14);
+    box-shadow: 0px 0px 50px -25px $color-d0;
+    background-color: $color-w0;
+    border-radius: $input-rounding;
+    align-items: center;
+
+    > input[type="text"] {
+      background-color: $color-w0;
+      @include input-text();
+    }
+    > .button {
+      height: calc(100% - var(--subdiv) * 8);
+      width: fit-content;
+      flex-shrink: 0;
+      padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 8);
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+      display: block;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      > p {
+        @include input-button-text();
+        pointer-events: none;
+        color: $color-w0;
+      }
+    }
+  }
+  &[type*="withIcon"] {
+    > input[type="text"] {
+      padding-right: calc(10.3% + var(--subdiv));
+    }
+    > .icon {
+      width: 5.3%;
+      display: block;
+      @include position(absolute, 50%, 5%, unset, unset);
+      transform: translateY(-50%);
+      pointer-events: none;
+
+      > img {
         width: 100%;
-        @include small-text();
-        font-weight: 400;
-        padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 6);
-        color: $color-d0;
-        background-color: #F6F9FC;
-        border-radius: 5px;
+        display: block;
+      }
+    }
+  }
+  &[type*="dropdown"] {
+    > input[type="text"] {
+      padding-right: calc(var(--baseline) * 2 + var(--subdiv) * 3);
+    }
+    > .dropdown {
+      max-height: 170px;
+      display: block;
+      @include position(absolute, 8%, 0, unset, unset);
+      z-index: 9998;
+      margin: 0 var(--subdiv);
+      padding: var(--subdiv);
+      background-color: $color-w0;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
 
-        &::placeholder{
-            color: $color-d5;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-    }
-    > .icon{
+      img {
+        display: block;
+      }
+      > input {
         display: none;
-    }
-    > .dropdown{
-        display: none;
-    }
-    > .button{
-        display: none;
-    }
-    &[type*="dark"]{
-        > .button{
-            background-color: $color-d0;
 
-            &:hover{
-                background-color: $color-d3;
-            }
+        &:not(:checked) {
+          ~ li:not(.selected) {
+            display: none;
+          }
         }
-    }
-    &[type*="green"]{
-        > .button{
-            background-color: $color-a0;
-
-            &:hover{
-                background-color: $color-a0-2;
-            }
+        &:checked {
+          ~ .selected {
+            // position: sticky;
+          }
         }
-    }
-    &[type*="button"]{
-        max-width: calc(var(--baseline) * 18 - var(--subdiv));
-        min-width: calc(var(--baseline) * 14);
-        box-shadow: 0px 0px 50px -25px $color-d0;
-        background-color: $color-w0;
-        border-radius: 5px;
+      }
+      > li {
+        width: 100%;
+        display: flex;
         align-items: center;
+        position: relative;
+        padding: 2px 0;
+        border-radius: 5px;
 
-        > input[type="text"]{
-            background-color: $color-w0;
-            @include input-text();
-        }
-        > .button{
-            height: calc(100% - var(--subdiv) * 8);
-            width: fit-content;
-            flex-shrink: 0;
-            padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 8);
-            cursor: pointer;
-            -webkit-user-select: none;
-            user-select: none;
+        .arrow {
+          width: calc(var(--subdiv) * 2);
+          flex-shrink: 0;
+          margin-left: var(--subdiv);
+          cursor: pointer;
+
+          &:before {
+            content: "";
             display: block;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-
-            > p{
-                @include input-button-text();
-                pointer-events: none;
-                color: $color-w0;
-            }
-        }
-    }
-    &[type*="withIcon"]{
-        > input[type="text"]{
-            padding-right: calc(10.3% + var(--subdiv));
-        }
-        > .icon{
-            width: 5.3%;
+            @include position(absolute, 0, unset, unset, 0);
+            width: 100%;
+            height: 100%;
+          }
+          &:after {
+            content: "";
             display: block;
-            @include position(absolute, 50%,5%,unset,unset);
-            transform: translateY(-50%);
-            pointer-events: none;
-
-            > img{
-                width: 100%;
-                display: block;
-            }
+            width: 0px;
+            border-color: $color-d4 transparent transparent transparent;
+            border-style: solid;
+            border-width: var(--subdiv);
+            transform: translateY(50%);
+          }
         }
+        &:not(.selected) {
+          margin-top: var(--subdiv);
+
+          .arrow {
+            opacity: 0;
+          }
+          &:hover {
+            background-color: $color-d5;
+          }
+        }
+      }
     }
-    &[type*="dropdown"]{
-        > input[type="text"]{
-            padding-right: calc(var(--baseline) * 2 + var(--subdiv) * 3);
-        }
-        > .dropdown{
-            max-height: 170px;
-            display: block;
-            @include position(absolute, 8%,0,unset,unset);
-            z-index: 9998;
-            margin: 0 var(--subdiv);
-            padding: var(--subdiv);
-            background-color: $color-w0;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
-
-            img{
-                display: block;
-            }
-            > input{
-                display: none;
-
-                &:not(:checked){
-                    ~ li:not(.selected){
-                        display: none;
-                    }
-                }
-                &:checked{
-                    ~ .selected{
-                        // position: sticky;
-                    }
-                }
-            }
-            > li{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                position: relative;
-                padding: 2px 0;
-                border-radius: 5px;
-                
-                .arrow{
-                    width: calc(var(--subdiv) * 2);
-                    flex-shrink: 0;
-                    margin-left: var(--subdiv);
-                    cursor: pointer;
-
-                    &:before{
-                        content: "";
-                        display: block;
-                        @include position(absolute, 0,unset,unset,0);
-                        width: 100%;
-                        height: 100%;
-                    }
-                    &:after{
-                        content: "";
-                        display: block;
-                        width: 0px;
-                        border-color: $color-d4 transparent transparent transparent;
-                        border-style: solid;
-                        border-width: var(--subdiv);
-                        transform: translateY(50%);
-                    }
-                }
-                &:not(.selected){
-                    margin-top: var(--subdiv);
-
-                    .arrow{
-                        opacity: 0;
-                    }
-                    &:hover{
-                        background-color: $color-d5;
-                    }
-                }
-            }
-        }
-    }
+  }
 }

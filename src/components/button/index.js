@@ -1,12 +1,12 @@
-import React from 'react';
-import './button.scss';
+import React from "react";
+import "./button.scss";
 
-function Button(props) {
-    return (
-        <div className={"button-wrapper "+props.type}>
-            <p>{props.text}</p>
-        </div>
-    );
+function Button({ type, className, text }) {
+  return (
+    <div className={`button-wrapper ${type} ${className}`}>
+      <p>{text}</p>
+    </div>
+  );
 }
 
 export default Button;

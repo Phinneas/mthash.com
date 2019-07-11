@@ -1,93 +1,84 @@
-@import '../../styles/--scss-vars.scss';
+@import "../../styles/--scss-vars.scss";
 
-.feature-v2-wrapper{
+.feature-v2-wrapper {
+  height: fit-content;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  > .icon {
     height: fit-content;
-    width: 20%;
+    width: 40%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
 
-    > .icon{
-        height: fit-content;
-        width: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    > img {
+      display: block;
+    }
+    &:after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  > .title {
+    @include content-title();
+    margin-top: var(--baseline);
+    margin-bottom: calc(var(--subdiv) * 3);
+  }
+  > .text {
+    @include content-paragraph();
+    color: $color-d0;
+    padding: calc(var(--subdiv) * 3);
+  }
+  > .link {
+    margin-top: var(--baseline);
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
 
-        > img{
-            width: 70%;
-            display: block;
-        }
-        &:after{
-            content: "";
-            display: block;
-            padding-top: 100%;
-        }
+    p {
+      @include regular-text();
+      color: $color-a0;
+      pointer-events: none;
     }
-    > .title{
-        @include content-title();
-        margin-top: var(--baseline);
-        margin-bottom: calc(var(--subdiv) * 3);
+    &:hover {
+      > p {
+        color: $color-a0-2;
+      }
+      &:after {
+        border-color: $color-a0-2;
+      }
     }
-    > .text{
-        @include content-paragraph();
-        color: $color-d4;
+    &:after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 4px;
+      @include position(absolute, unset, 0, unset, unset);
+      transform: translateX(250%) rotate(45deg);
+      border-top: 1px solid $color-a0;
+      border-right: 1px solid $color-a0;
+      margin-top: 1px;
     }
-    > .link{
-        margin-top: var(--baseline);
-        -webkit-user-select: none;
-        user-select: none;
-        cursor: pointer;
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        p{
-            @include regular-text();
-            color: $color-a0;
-            pointer-events: none;
-        }
-        &:hover{
-            > p{
-                color: $color-a0-2;
-            }
-            &:after{
-                border-color: $color-a0-2;
-            }
-        }
-        &:after{
-            content: "";
-            display: block;
-            height: 4px;
-            width: 4px;
-            @include position(absolute, unset,0,unset,unset);
-            transform: translateX(250%) rotate(45deg);
-            border-top: 1px solid $color-a0;
-            border-right: 1px solid $color-a0;
-            margin-top: 1px;
-        }
+  }
+  &.large {
+    > .title {
+      margin-top: calc(var(--baseline) + var(--subdiv) * 5);
     }
-    &.large{
-        > .icon{
-            border-radius: 100%;
-            background: $color-w0;
-            box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
-
-            > img{
-                width: 40%;
-            }
-        }
-        > .title{
-            margin-top: calc(var(--baseline) + var(--subdiv) * 5);
-        }
-        > .link{
-            margin-top: calc(var(--baseline) + var(--subdiv) * 5);
-        }
+    > .link {
+      margin-top: calc(var(--baseline));
     }
-    &.withoutLink{
-        > .link{
-            display: none;
-        }
+  }
+  &.withoutLink {
+    > .link {
+      display: none;
     }
+  }
 }

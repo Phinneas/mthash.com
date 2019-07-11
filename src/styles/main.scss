@@ -1,32 +1,28 @@
-  @import "--scss-vars.scss",
-          "--css-vars.scss",
-          "--css-global-styles.scss",
-          "--reset.scss",
-          "./components/tooltip.scss",
-          "./components/text-pairs.scss";
+@import "--scss-vars.scss", "--css-vars.scss", "--css-global-styles.scss",
+  "--reset.scss", "./components/tooltip.scss", "./components/text-pairs.scss";
 
-#__bs_script__{
+#__bs_script__ {
   display: none;
 }
-img{
+img {
   pointer-events: none;
 }
-body{
+body {
   height: 100%;
   width: 100%;
   //pseudo adaptation;
-  min-width: $brake2-2 * 1.25;
+  // min-width: $brake2-2 * 1.25;
 
-  > #root{
+  > #root {
     height: 100%;
     width: 100%;
 
-    > .main-wrapper{
+    > .main-wrapper {
       height: 100%;
     }
   }
-  @media only screen and (max-width: $brake2 - 1px){
-    zoom: 80%;
+  @media only screen and (max-width: $brake2 - 1px) {
+    // zoom: 80%;
     // -moz-transform: scale(0.8);
     // -moz-transform-origin: 50% 0;
   }

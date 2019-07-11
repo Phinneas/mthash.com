@@ -1,0 +1,59 @@
+#section-mining-platform {
+  height: fit-content;
+  width: calc(100% - calc(var(--baseline) * 12));
+  display: flex;
+  padding: 0 calc(var(--baseline) * 6);
+  z-index: 1;
+  background-color: #fbfafb;
+
+  > .content-wrapper {
+    @include block;
+    margin: auto;
+    text-align: center;
+    padding-bottom: calc(var(--baseline) * 4);
+    margin-bottom: calc(var(--baseline) * -2.5);
+    background-color: #fff;
+
+    > h1 {
+      margin: calc(var(--baseline) * 2 + var(--subdiv)) auto var(--baseline);
+      max-width: 730px;
+    }
+
+    > .title2,
+    > .light-text {
+      text-align: center;
+    }
+    > .features-wrapper {
+      display: flex;
+      margin-top: calc(var(--baseline) * 2 + var(--subdiv));
+
+      > .left-side {
+        height: fit-content;
+        width: 50%;
+        padding-left: calc(var(--baseline) * 3);
+        box-sizing: border-box;
+      }
+      > .right-side {
+        height: fit-content;
+        width: 50%;
+        position: relative;
+
+        > img:first-of-type {
+          @include position(absolute, -5%, unset, unset, 10%);
+          width: 79%;
+          z-index: 2;
+        }
+        > img:last-of-type {
+          @include position(absolute, 5%, unset, unset, 42%);
+          width: 69%;
+          z-index: 1;
+        }
+        &:after {
+          content: "";
+          display: block;
+          padding-top: 83%;
+        }
+      }
+    }
+  }
+}

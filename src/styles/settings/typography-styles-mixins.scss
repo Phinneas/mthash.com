@@ -1,56 +1,161 @@
-@import "typography-rythm.scss",
-"colors.scss",
-"breackpoints.scss",
-"typography-scale.scss",
-url('https://fonts.googleapis.com/css?family=Lato:300,400');
+@import "typography-rythm.scss", "colors.scss", "breackpoints.scss",
+  "typography-scale.scss",
+  url("https://fonts.googleapis.com/css?family=Lato:300,400");
 
-$font-family1: 'Montserrat';
+$font-montserrat: "Montserrat";
+$font-codec-cold-regular: "CodecCold-Regular";
+$font-codec-cold-news: "CodecCold-News";
 
-@mixin logo-text{
-  @include font($font-family1, 600, var(--font-size5), 0em, 1.3em, none);
+@mixin logo-text {
+  @include font($font-montserrat, 600, var(--font-size5), 0em, 1.3em, none);
 }
-@mixin regular-text{
-  @include font($font-family1, 500, var(--font-size3), 0.02em, 1.3em, none);
+@mixin regular-text {
+  @include font(
+    $font-codec-cold-regular,
+    500,
+    var(--font-size3),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin small-text{
-  @include font($font-family1, 400, var(--font-size1), 0.02em, 1.6em, none);
+@mixin small-text {
+  @include font(
+    $font-codec-cold-regular,
+    400,
+    var(--font-size1),
+    0.02em,
+    1.6em,
+    none
+  );
 }
-@mixin light-text{
-  @include font($font-family1, 300, var(--font-size3), 0.02em, 1.3em, none);
+@mixin light-text {
+  @include font(
+    $font-codec-cold-news,
+    300,
+    var(--font-size3),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin button-text{
-  @include font($font-family1, 600, var(--font-size2), 0.02em, 1.3em, none);
+@mixin button-text {
+  @include font(
+    $font-codec-cold-regular,
+    600,
+    var(--font-size3),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin input-button-text{
-  @include font($font-family1, 600, var(--font-size3), 0.02em, 1.3em, none);
+@mixin input-button-text {
+  @include font(
+    $font-codec-cold-regular,
+    600,
+    var(--font-size3),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin title1{
-  @include font($font-family1, 200, var(--font-size8), 0.02em, 1.3em, none);
+@mixin title1 {
+  @include font(
+    $font-codec-cold-regular,
+    200,
+    var(--font-size8),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin sub-title1{
-  @include font($font-family1, 200, var(--font-size4), 0.02em, 1.3em, none);
+@mixin sub-title1 {
+  @include font(
+    $font-codec-cold-regular,
+    200,
+    var(--font-size4),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin title2{
-  @include font($font-family1, 300, var(--font-size7), 0.02em, 1.3em, none);
+@mixin title2 {
+  @include font(
+    $font-codec-cold-regular,
+    300,
+    var(--font-size7),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin title3{
-  @include font($font-family1, 500, var(--font-size8), 0.02em, 1.3em, none);
+@mixin title3 {
+  @include font(
+    $font-codec-cold-regular,
+    500,
+    var(--font-size8),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin content-title{
-  @include font($font-family1, 300, var(--font-size4), 0.02em, 1.3em, none);
+@mixin content-title {
+  @include font(
+    $font-codec-cold-regular,
+    300,
+    var(--font-size5),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin content-paragraph{
-  @include font($font-family1, 300, var(--font-size2), 0.02em, 1.6em, none);
+@mixin content-paragraph {
+  @include font(
+    $font-codec-cold-regular,
+    300,
+    var(--font-size3),
+    0.02em,
+    1.6em,
+    none
+  );
 }
-@mixin content-paragraph2{
-  @include font($font-family1, 300, var(--font-size4), 0.02em, 1.6em, none);
+@mixin content-paragraph2 {
+  @include font(
+    $font-codec-cold-regular,
+    300,
+    var(--font-size4),
+    0.02em,
+    1.6em,
+    none
+  );
 }
-@mixin footer-title{
-  @include font($font-family1, 500, var(--font-size4), 0.02em, 1.3em, none);
+@mixin footer-title {
+  @include font(
+    $font-codec-cold-regular,
+    500,
+    var(--font-size4),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin footer-text{
-  @include font($font-family1, 400, var(--font-size3), 0.02em, 1.3em, none);
+@mixin footer-text {
+  @include font(
+    $font-codec-cold-regular,
+    400,
+    var(--font-size3),
+    0.02em,
+    1.3em,
+    none
+  );
 }
-@mixin input-text{
-  @include font($font-family1, 400, var(--font-size2), 0.02em, 1.3em, none);
+@mixin input-text {
+  @include font(
+    $font-codec-cold-regular,
+    400,
+    var(--font-size2),
+    0.02em,
+    1.3em,
+    none
+  );
 }

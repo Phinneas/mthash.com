@@ -1,171 +1,179 @@
-@import '../../styles/--scss-vars.scss';
+@import "../../styles/--scss-vars.scss";
 
-.header-wrapper{
-    $side-padding: calc(var(--baseline) * 10 - var(--subdiv));
+.header-wrapper {
+  $side-padding: calc(var(--baseline) * 10 - var(--subdiv));
 
-    height: calc(var(--baseline) * 4);
-    width: 100%;
-    min-width: $brake2-2 * 1.25;
+  height: calc(var(--baseline) * 4);
+  width: 100%;
+  min-width: $brake2-2 * 1.25;
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 9999;
+  position: fixed;
+  @include transition(background-color #{","} box-shadow #{","} height, $time6);
+
+  > a {
+    @include position(absolute, unset, unset, unset, $side-padding);
+    width: 9%;
+
+    > .logo-wrapper {
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      flex-shrink: 0;
+
+      > p {
+        height: fit-content;
+        margin: auto;
+        @include logo-text();
+        cursor: pointer;
+      }
+      > .image-wrapper {
+        width: 30%;
+        margin-right: var(--subdiv);
+        position: relative;
+
+        > img {
+          @include position(absolute, 0, unset, unset, 0);
+          width: 100%;
+        }
+        &:after {
+          content: "";
+          display: block;
+          padding-top: 100%;
+        }
+      }
+    }
+  }
+  > .menu-wrapper {
+    height: 100%;
+    width: fit-content;
     display: flex;
     align-items: center;
-    -webkit-user-select: none;
-    user-select: none;
-    z-index: 9999;
-    position: fixed;
-    @include transition(background-color #{','} box-shadow #{','} height, $time6);
+    flex-shrink: 0;
+    @include position(absolute, unset, unset, unset, 50%);
+    transform: translateX(-50%);
 
-    > a{
-        @include position(absolute, unset,unset,unset,$side-padding);
-        width: 9%;
+    > li {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 5px;
 
-        > .logo-wrapper{
-            height: fit-content;
-            width: 100%;
-            display: flex;
-            flex-shrink: 0;
+      > a {
+        padding: calc(var(--subdiv) * 3) calc(var(--subdiv) * 4);
 
-            > p{
-                height: fit-content;
-                margin: auto;
-                @include logo-text();
-                cursor: pointer;
-            }
-            > .image-wrapper{
-                width: 30%;
-                margin-right: var(--subdiv);
-                position: relative;
-
-                > img{
-                    @include position(absolute, 0,unset,unset,0);
-                    width: 100%;
-                }
-                &:after{
-                    content: "";
-                    display: block;
-                    padding-top: 100%
-                }
-            }
+        > p {
+          @include light-text();
+          color: $color-do-6;
+          pointer-events: none;
         }
+      }
+      &:hover > a > p,
+      &.active > a > p {
+        color: $color-d4;
+      }
     }
-    > .menu-wrapper{
-        height: 100%;
-        width: fit-content;
-        display: flex;
-        align-items: center;
-        flex-shrink: 0;
-        @include position(absolute, unset,unset,unset,50%);
-        transform: translateX(-50%);
+  }
+  > .buttons-wrapper {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    @include position(absolute, unset, $side-padding, unset, unset);
 
-        > li{
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            border-radius: 5px;
+    > a {
+      > p {
+        @include light-text();
+        color: $color-do-6;
+        margin-right: calc(var(--subdiv) * 4);
+        cursor: pointer;
 
-            > a{
-                padding: calc(var(--subdiv) * 3) calc(var(--subdiv) * 4);
-
-                > p{
-                    @include light-text();
-                    color: $color-d4;
-                    pointer-events: none;
-                }
-            }
-            &:hover > a > p, &.active > a > p{
-                color: $color-d2;
-            }
+        &:hover {
+          color: $color-d4;
         }
+      }
     }
-    > .buttons-wrapper{
-        width: fit-content;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        flex-shrink: 0;
-        @include position(absolute, unset,$side-padding,unset,unset);
-
-        > a{
-            > p{
-                @include light-text();
-                color: $color-d4;
-                margin-right: calc(var(--subdiv) * 4);
-                cursor: pointer;
-
-                &:hover{
-                    color: $color-d0;
-                }
-            }
-        }
-        .button-wrapper{
-            margin-right: calc(var(--subdiv) * 3);
-        }
+    .button-wrapper {
+      margin-right: calc(var(--subdiv) * 3);
+      padding: calc(var(--subdiv) * 2) calc(var(--subdiv) * 3);
     }
-    &.active{
-        background-color: $color-w0;
-        box-shadow: 0px 15px 50px -40px rgba($color-d0, 0.5);
-    }
-    &.slim{
-        height: calc(var(--baseline) * 3 + var(--subdiv));
-        box-shadow: 0px 15px 50px -35px rgba($color-d0, 0.5);
-    }
-    &.green{
-        background-color: #1DE9B6;
+  }
+  &.active {
+    background-color: $color-w0;
+    box-shadow: 0px 15px 50px -40px rgba($color-d0, 0.5);
+  }
+  &.slim {
+    height: calc(var(--baseline) * 3 + var(--subdiv));
+    box-shadow: 0px 15px 50px -35px rgba($color-d0, 0.5);
+  }
+  &.green {
+    background-color: #1de9b6;
 
-        > .menu-wrapper > li > a > p, > .buttons-wrapper > a > p{
-            color: $color-d0-4;
-        }
+    > .menu-wrapper > li > a > p,
+    > .buttons-wrapper > a > p {
+      color: $color-d0-4;
     }
-    &.dark{
-        background-color: #121626;
+  }
+  &.gray {
+    background-color: #d7d7d8;
+  }
+  &.dark {
+    background-color: #121626;
 
-        > a{
-            > .logo-wrapper{
-                > p{
-                    background: linear-gradient(to bottom, #606EA3 0%, #4E4376 100%);
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-                > .image-wrapper{
-                    > img:last-child{
-                        opacity: 0;
-                    }
-                }
-            }
+    > a {
+      > .logo-wrapper {
+        > p {
+          background: linear-gradient(to bottom, #606ea3 0%, #4e4376 100%);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
-        > .menu-wrapper{
-            > li{
-                > a{
-                    > p{
-                        background: linear-gradient(to bottom, #606EA3 0%, #4E4376 100%);
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-                }
-                &:hover > a > p, &.active > a > p{
-                    background: linear-gradient(to bottom, #818cb6 0%, #635496 100%);
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
+        > .image-wrapper {
+          > img:last-child {
+            opacity: 0;
+          }
         }
-        > .buttons-wrapper{
-            p{
-                background: linear-gradient(to bottom, #606EA3 0%, #4E4376 100%);
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-            > .button-wrapper{
-                border-color: #474975;
-
-                &:hover{
-                    background-color: #474975;
-
-                    > p{
-                        -webkit-text-fill-color: unset;
-                        color: #121626;
-                    }
-                }
-            }
-        }
+      }
     }
+    > .menu-wrapper {
+      > li {
+        > a {
+          > p {
+            background: linear-gradient(to bottom, #606ea3 0%, #4e4376 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        &:hover > a > p,
+        &.active > a > p {
+          background: linear-gradient(to bottom, #818cb6 0%, #635496 100%);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    > .buttons-wrapper {
+      p {
+        background: linear-gradient(to bottom, #606ea3 0%, #4e4376 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      > .button-wrapper {
+        border-color: #474975;
+
+        &:hover {
+          background-color: #474975;
+
+          > p {
+            -webkit-text-fill-color: unset;
+            color: #121626;
+          }
+        }
+      }
+    }
+  }
 }
