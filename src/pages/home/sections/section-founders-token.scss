@@ -4,77 +4,76 @@
   position: relative;
   z-index: 1;
   padding-bottom: calc(var(--baseline) * 4);
-  background: linear-gradient(214deg, #fff 11%, #fcfbfc 100%);
+  background: linear-gradient(206deg, #fff 37%, #fcfbfc 53%);
 
   > .bg {
     @include position(absolute, unset, unset, 0, unset);
     width: 100%;
     height: 1505px;
   }
-  > .table-wrapper {
+  > .offer-wrapper {
     width: 100%;
     max-width: $brake2-2;
     margin: auto;
     margin-top: calc(var(--baseline) * 7);
-    display: flex;
-    align-items: center;
     position: relative;
 
-    > .right-column {
-      width: calc(65% - 1px);
-      position: relative;
-      padding: 0 0 calc(var(--baseline) * 2 + var(--subdiv) * 3)
-        calc(var(--baseline) * 2 + var(--subdiv) * 3);
+    > .sub-title {
+      @include light-text();
+      color: $color-d4;
+      text-align: center;
+      margin-bottom: calc(var(--baseline));
+    }
 
-      > .sub-title {
-        @include light-text();
-        color: $color-d4;
-        @include position(absolute, 0, unset, unset, unset);
-        transform: translateY(-100%);
-      }
-      > .title {
-        @include title2();
-      }
-      > .text {
-        @include content-paragraph();
-        color: $color-d4;
+    > .title {
+      @include title1();
+      text-align: center;
+    }
 
-        &:first-of-type {
-          margin-top: var(--baseline);
-        }
-        &:last-of-type {
-          margin-top: calc(var(--subdiv) * 3);
-        }
-      }
-      > .list {
-        width: calc(100% - var(--subdiv) * 8);
-        border: 1px solid $color-d5;
-        margin-top: calc(var(--baseline) + var(--subdiv));
-        padding: calc(var(--subdiv) * 4);
+    > .content-wrapper {
+      display: flex;
+      align-items: center;
+      margin: calc(var(--baseline) * 4) calc(var(--baseline) * 4);
 
-        > li {
-          display: flex;
-          margin-bottom: calc(var(--subdiv) * 2);
+      > .left-column {
+        flex-basis: 50%;
+        padding-right: calc(var(--baseline) * 4);
 
-          > p {
-            @include small-text();
-            flex-shrink: 0;
-            color: $color-d4;
+        > .text {
+          @include content-paragraph();
+          color: $color-d4;
+
+          &:last-of-type {
+            margin-top: var(--baseline);
           }
-          > span {
-            width: 100%;
-            height: 1px;
-            align-self: center;
-            transform: translateY(300%);
-            display: block;
-            background-image: linear-gradient(
-              to right,
-              $color-d5 4px,
-              transparent 2px
-            );
-            background-repeat: repeat;
-            background-size: 6px;
-            margin: 0 var(--baseline);
+        }
+      }
+
+      > .right-column {
+        position: relative;
+        flex-basis: 50%;
+        padding-left: calc(var(--baseline) * 4);
+        border-left: 1px solid lightgray;
+
+        > .list {
+          > li {
+            display: flex;
+
+            > p {
+              @include content-paragraph();
+              flex-shrink: 0;
+              color: $color-d4;
+            }
+            > hr {
+              width: 100%;
+              height: 1px;
+              align-self: flex-end;
+              // transform: translateY(300%);
+              // display: block;
+              margin: 8px;
+              border: none;
+              border-bottom: 1px dashed #e6e5e8;
+            }
           }
         }
       }

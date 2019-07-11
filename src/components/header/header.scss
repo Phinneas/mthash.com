@@ -67,7 +67,7 @@
 
         > p {
           @include light-text();
-          color: $color-d4;
+          color: $color-do-6;
           pointer-events: none;
         }
       }
@@ -88,7 +88,7 @@
     > a {
       > p {
         @include light-text();
-        color: $color-d4;
+        color: $color-do-6;
         margin-right: calc(var(--subdiv) * 4);
         cursor: pointer;
 

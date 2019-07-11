@@ -16,7 +16,6 @@
     align-items: center;
 
     > img {
-      width: 70%;
       display: block;
     }
     &:after {
@@ -69,11 +68,6 @@
     }
   }
   &.large {
-    > .icon {
-      > img {
-        width: 80%;
-      }
-    }
     > p {
       padding: 0 30px;
     }

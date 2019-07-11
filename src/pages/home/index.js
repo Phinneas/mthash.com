@@ -56,18 +56,21 @@ export default class HomePage extends React.Component {
               <FeatureV2
                 type="large"
                 imgName="home/card-1/icon"
+                format="svg"
                 title="Accessible"
                 text="Direct value of hash power through smart contract ownership hosting with market liquidity"
               />
               <FeatureV2
                 type="large"
                 imgName="home/card-1/icon2"
+                format="svg"
                 title="Scalable"
                 text="A scalable token of hash power that increases with the mining difficulty and overall hash network"
               />
               <FeatureV2
                 type="large"
                 imgName="home/card-1/icon3"
+                format="svg"
                 title="Transparent"
                 text="Total platform hashrate and shares from mining shown like a pool with full transparency"
               />
@@ -90,21 +93,25 @@ export default class HomePage extends React.Component {
                   imgName="home/card-2/icon"
                   title="Simple & Intuitive"
                   text="Mining is now as easy as trading, simply pick the coin you want to mine using hash tokens"
+                  format="svg"
                 />
                 <Feature
                   imgName="home/card-2/icon2"
                   title="Distributed Wealth"
                   text="Spread the coinbase of several blockchain networks and capitalize on your finance"
+                  format="svg"
                 />
                 <Feature
                   imgName="home/card-2/icon3"
                   title="Stability Not Volatility"
                   text="Give true fundamental value to the cryptoeconomy while earning a steady income"
+                  format="svg"
                 />
                 <Feature
                   imgName="home/card-2/icon4"
                   title="Seamless Experience"
                   text="Easily transition between mining and trading, use the tokens for both mining and trading"
+                  format="svg"
                 />
               </div>
               <div className="right-side">
@@ -145,7 +152,8 @@ export default class HomePage extends React.Component {
                 />
               </div>
               <h1 className="title">
-                Arcade Mining<span>&trade;</span> <span>with Tokens</span>
+                <b>Arcade Mining</b>
+                <span>&trade;</span> <span>with Tokens</span>
               </h1>
               <div className="text">
                 <p>
@@ -255,58 +263,62 @@ export default class HomePage extends React.Component {
             src={require("../../assets/img/home/section-founders-token/BG.png")}
             alt="sry"
           />
-          <div className="table-wrapper">
-            <div className="right-column">
-              <h2 className="sub-title">Phase 1</h2>
-              <h1 className="title">Founder’s Token Offering</h1>
-              <p className="text">
-                The MtHash Founder’s Token distribution will begin soon. These
-                tokens are separate from the hash tokens distributed for the
-                platform. These tokens are exclusively used for Founder’s
-                Benefits.
-              </p>
-              <p className="text">
-                By participating in the Founder’s Token Offering, you will be
-                contributing to the development fund and be a part of the
-                founding of MtHash.
-              </p>
-              <ul className="list">
-                <li>
-                  <p>Token Name</p>
-                  <span />
-                  <p>MtHash</p>
-                </li>
-                <li>
-                  <p>Starting Price</p>
-                  <span />
-                  <p>1 MASH = USD 1.00</p>
-                </li>
-                <li>
-                  <p>Total Supply</p>
-                  <span />
-                  <p>200,000 MASH</p>
-                </li>
-                <li>
-                  <p>All Unsold Tokens</p>
-                  <span />
-                  <p>MtHash Foundation</p>
-                </li>
-                <li>
-                  <p>Token Type</p>
-                  <span />
-                  <p>ERC20</p>
-                </li>
-                <li>
-                  <p>Hard Cap</p>
-                  <span />
-                  <p>USD 1,000,000</p>
-                </li>
-                <li>
-                  <p>Soft Cap</p>
-                  <span />
-                  <p>USD 300,000</p>
-                </li>
-              </ul>
+          <div className="offer-wrapper">
+            <h2 className="sub-title">Phase 1</h2>
+            <h1 className="title">Founder’s Token Offering</h1>
+            <div className="content-wrapper">
+              <div className="left-column">
+                <p className="text">
+                  The MtHash Founder’s Token distribution will begin soon. These
+                  tokens are separate from the hash tokens distributed for the
+                  platform. These tokens are exclusively used for Founder’s
+                  Benefits.
+                </p>
+                <p className="text">
+                  By participating in the Founder’s Token Offering, you will be
+                  contributing to the development fund and be a part of the
+                  founding of MtHash.
+                </p>
+              </div>
+              <div className="right-column">
+                <ul className="list">
+                  <li>
+                    <p>Token Name</p>
+                    <hr />
+                    <p>MtHash</p>
+                  </li>
+                  <li>
+                    <p>Starting Price</p>
+                    <hr />
+                    <p>1 MASH = USD 1.00</p>
+                  </li>
+                  <li>
+                    <p>Total Supply</p>
+                    <hr />
+                    <p>310,000 MASH</p>
+                  </li>
+                  <li>
+                    <p>All Unsold Tokens</p>
+                    <hr />
+                    <p>MtHash Foundation</p>
+                  </li>
+                  <li>
+                    <p>Token Type</p>
+                    <hr />
+                    <p>ERC20</p>
+                  </li>
+                  <li>
+                    <p>Hard Cap</p>
+                    <hr />
+                    <p>USD 1,000,000</p>
+                  </li>
+                  <li>
+                    <p>Soft Cap</p>
+                    <hr />
+                    <p>USD 300,000</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -337,22 +349,26 @@ export default class HomePage extends React.Component {
             <FeatureV2
               imgName="home/section-founders-token/iconA"
               title="Exclusive Access"
-              text="Gain access to the private beta of the mining and exchange platform, mobile app and more"
+              text="Gain access to the private beta of the mining and exchange platform, blockchain testnet, and more"
+              format="svg"
             />
             <FeatureV2
               imgName="home/section-founders-token/iconB"
               title="Founder’s Rights"
-              text="Use Founder’s tokens to vote on company decisions like hardware/algo selection and exchange listings"
+              text="Use Founder’s tokens to get extra earning power on tokens from trading while mining on the platform"
+              format="svg"
             />
             <FeatureV2
               imgName="home/section-founders-token/iconC"
               title="Lifetime Discount"
               text="Get a lifetime discount on mining and trading fees by redeeming Founder’s tokens on your account"
+              format="svg"
             />
           </div>
         </section>
         <Subscribe
-          text="Get Started Today With $50 or Less"
+          text="Get Started Today with $50 or Less"
+          subText="Take control of your financial future"
           buttonText="Get Started"
         />
       </div>

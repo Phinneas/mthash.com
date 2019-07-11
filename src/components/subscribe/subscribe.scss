@@ -1,25 +1,40 @@
-@import '../../styles/--scss-vars.scss';
+@import "../../styles/--scss-vars.scss";
 
-.subscribe-wrapper{
-    height: fit-content;
-    width: calc(100% - var(--baseline) * 18);
-    padding: calc(var(--baseline) * 6) calc(var(--baseline) * 9);
+.subscribe-wrapper {
+  height: fit-content;
+  padding: calc(var(--baseline) * 6) calc(var(--baseline) * 9);
+  position: relative;
+
+  > .bg {
+    @include position(absolute, 0, unset, unset, 0);
+    height: 100%;
+    width: 100%;
+  }
+  > .content-wrapper {
     position: relative;
+    display: flex;
+    max-width: 1329px;
+    margin: auto;
 
-    > .bg{
-        @include position(absolute, 0,unset,unset,0);
-        height: 100%;
-        width: 100%;
-    }
-    > .title, > .input-wrapper{
-        position: relative;
-    }
-    > .title{
+    > .left-column {
+      margin-right: calc(var(--baseline) * 2);
+
+      .title {
         @include title3();
         font-weight: 600;
         color: $color-w0;
         margin-bottom: calc(var(--baseline));
-        -webkit-user-select: none;
-        user-select: none;
+      }
+
+      .text {
+        @include content-title();
+        color: #dadada;
+      }
     }
+
+    > .right-column {
+      flex-basis: 60%;
+      margin-left: calc(var(--baseline) * 2);
+    }
+  }
 }

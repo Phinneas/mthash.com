@@ -5,15 +5,23 @@ import Button from "../button";
 
 import "./email-get-started.scss";
 
-function EmailGetStarted() {
+function EmailGetStarted({
+  buttonType = "dark",
+  buttonText = "Get Started",
+  className
+}) {
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${className}`}>
       <Input
         type="dark button"
         buttonText="Get Started"
         placeholder="Your email address"
       />
-      <Button className="get-started-button" type="dark" text="Get Started" />
+      <Button
+        className="get-started-button"
+        text={buttonText}
+        type={buttonType}
+      />
     </div>
   );
 }
