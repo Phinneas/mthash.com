@@ -6,7 +6,7 @@
     @include position(absolute, 0, unset, unset, unset);
     width: 100%;
     // max-height: $top-bg-height;
-    height: fit-content;
+    height: 100vh;
   }
 
   > .card {
