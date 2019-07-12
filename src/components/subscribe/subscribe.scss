@@ -34,7 +34,19 @@
 
     > .right-column {
       flex-basis: 60%;
-      margin-left: calc(var(--baseline) * 2);
+      margin: 0;
+
+      input {
+        padding: calc(var(--subdiv) * 4);
+      }
+
+      > .get-starged-bottom {
+        padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 8);
+
+        &:hover {
+          background-color: $color-a0;
+        }
+      }
     }
   }
 }

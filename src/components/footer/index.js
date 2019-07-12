@@ -39,7 +39,6 @@ function Footer(props) {
             <li>Hash Power</li>
             <li>Algorithms</li>
             <li>Arcade Mining</li>
-            <li>Arcade Mining</li>
             <li>White Paper</li>
             <li>Earn Hash Tokens</li>
           </ul>

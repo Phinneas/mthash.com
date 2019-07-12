@@ -1,12 +1,12 @@
-@import   '--scss-vars.scss';
-        //  'settings/typography-styles.scss'; //?? repeat in --css-global - 'settings/typography-styles.scss';
+@import "--scss-vars.scss";
+//  'settings/typography-styles.scss'; //?? repeat in --css-global - 'settings/typography-styles.scss';
 
 ::-webkit-scrollbar {
   // width: 0;
   // -webkit-appearance: none;
 }
 // maksym added zeroing
-*{
+* {
   padding: 0;
   margin: 0;
 }
@@ -37,75 +37,98 @@ theglyph-app {
 
 //--reset-component
 
-  *::selection {
-    background-color: $color-d0;
-    color: $color-w0;
-  }
-  
-  ::-webkit-scrollbar {
-    // width: 0;
-    // -webkit-appearance: none;
-  }
+*::selection {
+  background-color: $color-d0;
+  color: $color-w0;
+}
 
-  // width: 100%;
-  // margin: 0 auto;
+::-webkit-scrollbar {
+  // width: 0;
+  // -webkit-appearance: none;
+}
 
-  // display: block;
-  // position: relative;
+// width: 100%;
+// margin: 0 auto;
 
-  // @include font-smoothing(on);
+// display: block;
+// position: relative;
 
-  nav-link {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-  }
-  :hover, :focus, :active {
-    outline: none;
-    text-decoration: none;
-    // border-style: none;
-  }
+// @include font-smoothing(on);
 
-  /* Hide Play button + controls on iOS */
-  video::-webkit-media-controls {
-    display:none !important;
-  }
-  
-  img{
-    box-sizing: border-box;
-  }
+nav-link {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+:hover,
+:focus,
+:active {
+  outline: none;
+  text-decoration: none;
+  // border-style: none;
+}
 
-  @include placeholder($color-d6);
+/* Hide Play button + controls on iOS */
+video::-webkit-media-controls {
+  display: none !important;
+}
 
-  ul {
-    padding: 0;
-  }
+img {
+  box-sizing: border-box;
+}
 
-  input, textarea, fieldset {
-    border: 0;
-    outline: none;
-    resize: none;
-    -ms-overflow-style: none;
-  }
+@include placeholder($color-d6);
 
-  a, b, p, h1, h2, h3, h4, h5, h6, ul, span, nav-link {
-    cursor: auto;
-    color: $color-d0;
-    text-rendering: optimizeLegibility;
-  }
+ul {
+  padding: 0;
+}
 
-  a, li, ul, span, div {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
+input,
+textarea,
+fieldset {
+  border: 0;
+  outline: none;
+  resize: none;
+  -ms-overflow-style: none;
+}
 
-  img {
-    @include noselection;
-  }
+a,
+b,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+span,
+nav-link {
+  cursor: auto;
+  color: $color-d0-0;
+  text-rendering: optimizeLegibility;
+}
 
-  a, a:visited, a:focus, a:active, a:hover {
-    text-decoration: none;
-    cursor: pointer;
-  }
+a,
+li,
+ul,
+span,
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
-  li {
-    list-style-type: none;
-  }
+img {
+  @include noselection;
+}
+
+a,
+a:visited,
+a:focus,
+a:active,
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}

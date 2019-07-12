@@ -8,7 +8,8 @@ import "./email-get-started.scss";
 function EmailGetStarted({
   buttonType = "dark",
   buttonText = "Get Started",
-  className
+  className,
+  buttonClassName
 }) {
   return (
     <div className={`wrapper ${className ? className : ""}`}>
@@ -19,7 +20,9 @@ function EmailGetStarted({
         placeholder="Your email address"
       />
       <Button
-        className="get-started-button"
+        className={`get-started-button ${
+          buttonClassName ? buttonClassName : ""
+        }`}
         text={buttonText}
         type={buttonType}
       />

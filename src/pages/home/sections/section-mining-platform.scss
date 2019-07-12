@@ -31,22 +31,22 @@
       > .left-side {
         height: fit-content;
         width: 50%;
-        padding-left: calc(var(--baseline) * 3);
+        padding-right: calc(var(--subdiv));
         box-sizing: border-box;
       }
       > .right-side {
         height: fit-content;
-        width: 50%;
+        width: 55%;
         position: relative;
 
         > img:first-of-type {
-          @include position(absolute, -5%, unset, unset, 10%);
-          width: 79%;
+          @include position(absolute, -9%, unset, unset, 1%);
+          width: 89%;
           z-index: 2;
         }
         > img:last-of-type {
-          @include position(absolute, 5%, unset, unset, 42%);
-          width: 69%;
+          @include position(absolute, unset, unset, unset, 38%);
+          width: 74%;
           z-index: 1;
         }
         &:after {

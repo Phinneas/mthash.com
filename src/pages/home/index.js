@@ -42,8 +42,8 @@ export default class HomePage extends React.Component {
             alt="sry"
           />
 
-          <div class="content-wrapper">
-            <div class="caption-wrapper">
+          <div className="content-wrapper">
+            <div className="caption-wrapper">
               <h1 className="title3">
                 The Most Accessible Mining and Exchange Platform
               </h1>
@@ -337,7 +337,11 @@ export default class HomePage extends React.Component {
                   <b>Become a Founder</b>
                 </h1>
                 <p className="text">Join the Hash Power Revolution</p>
-                <Button text="Buy Now" type="green" />
+                <Button
+                  text="Buy Now"
+                  type="green"
+                  className="buy-now-button"
+                />
               </div>
               <div className="right">
                 <img

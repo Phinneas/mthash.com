@@ -1,8 +1,8 @@
 @import "../../styles/--scss-vars.scss";
 
 .feature-v2-wrapper {
-  height: fit-content;
-  width: 20%;
+  min-height: 100%;
+  width: 23%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +17,7 @@
 
     > img {
       display: block;
+      height: 150px;
     }
     &:after {
       content: "";
@@ -32,7 +33,8 @@
   > .text {
     @include light-text();
     color: $color-d0;
-    padding: calc(var(--subdiv) * 3);
+    flex-grow: 1;
+    line-height: 1.8em;
   }
   > .link {
     margin-top: var(--baseline);
@@ -61,7 +63,6 @@
       display: block;
       height: 4px;
       width: 4px;
-      @include position(absolute, unset, 0, unset, unset);
       transform: translateX(250%) rotate(45deg);
       border-top: 1px solid $color-a0;
       border-right: 1px solid $color-a0;
@@ -74,6 +75,7 @@
     }
     > .link {
       margin-top: calc(var(--baseline));
+      justify-self: flex-end;
     }
   }
   &.withoutLink {

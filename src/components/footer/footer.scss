@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: calc(var(--baseline) + var(--subdiv) * 2) 0;
+    padding-top: calc(var(--baseline) + var(--subdiv) * 4 + 3px);
 
     > .logo-wrapper {
       display: flex;
@@ -33,6 +33,8 @@
       > .logo-text {
         font-weight: 500;
         line-height: 100%;
+        @include title2();
+        font-size: var(--font-size4);
       }
     }
     > .copyright {
@@ -54,7 +56,7 @@
       }
       li {
         @include footer-text();
-        margin-bottom: calc(var(--subdiv) * 2);
+        margin-bottom: calc(var(--subdiv) * 3);
       }
       &:not(.social) {
         li:not(.header) {

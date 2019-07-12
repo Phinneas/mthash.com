@@ -13,7 +13,6 @@ function TableRaw({
   svgPath
 }) {
   var diffState = "positive";
-  var difference = difference;
   var diffColor = "#8DCC4E";
 
   if (parseFloat(difference) < 0) {
@@ -35,10 +34,12 @@ function TableRaw({
         </p>
       </div>
       <div className="price-wrapper">
-        <p className="price regular-text">${price}</p>
-        <div className={"difference-wrapper " + diffState}>
-          <div className="arrow" />
-          <p className="value regular-text">{difference}%</p>
+        <div className="align-wrapper">
+          <p className="price regular-text">${price}</p>
+          <div className={"difference-wrapper " + diffState}>
+            <div className="arrow" />
+            <p className="value regular-text">{difference}%</p>
+          </div>
         </div>
       </div>
       <p className="total-hash-value regular-text">{totalHash} TH/s</p>

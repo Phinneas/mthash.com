@@ -13,5 +13,9 @@
     border-radius: $input-rounding;
     margin-left: calc(var(--subdiv) * 2);
     padding: calc(var(--subdiv) * 5) calc(var(--subdiv) * 8);
+
+    &:hover {
+      background-color: $color-d0-7;
+    }
   }
 }

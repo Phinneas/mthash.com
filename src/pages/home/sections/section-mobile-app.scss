@@ -10,21 +10,20 @@
     @include position(absolute, 0, unset, unset, unset);
     width: 100%;
     max-height: $top-bg-height;
-    height: 840px;
+    height: 100vh;
   }
 
   > .card {
     > .text-wrapper {
       padding-right: 4%;
       margin: 0 calc(var(--baseline) * 5) calc(var(--subdiv) * 8);
+      color: $color-d0;
 
       > .link {
         display: flex;
         margin-top: var(--baseline);
 
         > a {
-          width: 45%;
-
           > img {
             width: 100%;
           }
@@ -37,12 +36,10 @@
       margin: calc(var(--baseline) * 6 + var(--subdiv) * 2) 0;
 
       > img:first-of-type {
-        @include position(absolute, 0%, 42%, unset, unset);
-        width: 33%;
+        @include position(absolute, -6%, 42%, unset, unset);
       }
       > img:last-of-type {
-        @include position(absolute, 44%, 0%, unset, unset);
-        width: 58%;
+        @include position(absolute, 37%, unset, unset, 37%);
       }
       &:after {
         content: "";

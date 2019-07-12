@@ -30,6 +30,7 @@
       @include light-text();
       margin-top: calc(var(--subdiv) * 3);
       color: $color-d0;
+      line-height: 1.8em;
     }
   }
 }

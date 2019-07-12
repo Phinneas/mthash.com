@@ -17,14 +17,16 @@ function HashTokenPrice() {
         </p>
       </div>
       <div className="price-wrapper">
-        <p className="price">$10.73</p>
-        <div className="difference-wrapper positive">
-          <div className="arrow" />
-          <p className="value">0.73%</p>
+        <div className="align-wrapper">
+          <p className="price">$10.73</p>
+          <div className="difference-wrapper positive">
+            <div className="arrow" />
+            <p className="value">0.73%</p>
+          </div>
         </div>
       </div>
       <div className="action-wrapper">
-        <Button text="Buy" type="dark" />
+        <Button text="Buy" type="dark" className="buy-token-button" />
       </div>
     </div>
   );
