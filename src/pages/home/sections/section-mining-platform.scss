@@ -13,16 +13,17 @@
     padding-bottom: calc(var(--baseline) * 4);
     margin-bottom: calc(var(--baseline) * -2.5);
     background-color: #fff;
+    text-align: center;
 
     > h1 {
-      margin: calc(var(--baseline) * 2 + var(--subdiv)) auto var(--baseline);
+      margin: calc(var(--baseline) * 3 + var(--subdiv) * 8) auto var(--baseline);
       max-width: 730px;
     }
 
-    > .title2,
     > .light-text {
-      text-align: center;
+      margin: calc(var(--subdiv) * 6) 0 calc(var(--subdiv) * 20);
     }
+
     > .features-wrapper {
       display: flex;
       margin-top: calc(var(--baseline) * 2 + var(--subdiv));

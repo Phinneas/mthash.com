@@ -6,7 +6,7 @@ import "./hash-token-price.scss";
 function HashTokenPrice() {
   return (
     <div className="row-preview">
-      <div>
+      <div className="token-name-wrapper">
         <img
           className="icon"
           src={require("../../assets/img/home/table-icons/icon1.png")}
@@ -16,7 +16,7 @@ function HashTokenPrice() {
           Hash Token &nbsp;<span>HASH</span>
         </p>
       </div>
-      <div className="hash-price-wrapper">
+      <div className="price-wrapper">
         <p className="price">$10.73</p>
         <div className="difference-wrapper positive">
           <div className="arrow" />

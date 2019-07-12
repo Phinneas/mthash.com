@@ -1,12 +1,12 @@
 #section-earn-hash-power {
-  height: fit-content;
+  height: 100vh;
+  display: flex;
 
   > .bg {
     @include position(absolute, 0, unset, unset, unset);
     width: 100%;
-    max-height: $top-bg-height;
-    height: 1229px;
-    opacity: 0.2;
+    // max-height: $top-bg-height;
+    height: fit-content;
   }
 
   > .card {
@@ -33,7 +33,7 @@
     > .illustrations-wrapper {
       width: 57%;
       position: relative;
-      margin: calc(var(--baseline) * 6 + var(--subdiv) * 2) 0;
+      // margin: calc(var(--baseline) * 6 + var(--subdiv) * 2) 0;
 
       > img:first-of-type {
         @include position(absolute, 13%, unset, unset, 20%);

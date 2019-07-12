@@ -14,7 +14,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     500,
     var(--font-size3),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -24,7 +24,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     400,
     var(--font-size1),
-    0.02em,
+    0em,
     1.6em,
     none
   );
@@ -34,7 +34,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-news,
     300,
     var(--font-size3),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -44,7 +44,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     600,
     var(--font-size3),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -54,7 +54,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     600,
     var(--font-size3),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -64,7 +64,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     200,
     var(--font-size8),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -74,7 +74,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     200,
     var(--font-size4),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -84,7 +84,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     300,
     var(--font-size7),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -94,7 +94,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     500,
     var(--font-size8),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -104,7 +104,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     300,
     var(--font-size5),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -114,7 +114,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     300,
     var(--font-size3),
-    0.02em,
+    0em,
     1.6em,
     none
   );
@@ -124,7 +124,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     300,
     var(--font-size4),
-    0.02em,
+    0em,
     1.6em,
     none
   );
@@ -134,7 +134,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     500,
     var(--font-size4),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -144,7 +144,7 @@ $font-codec-cold-news: "CodecCold-News";
     $font-codec-cold-regular,
     400,
     var(--font-size3),
-    0.02em,
+    0em,
     1.3em,
     none
   );
@@ -153,8 +153,8 @@ $font-codec-cold-news: "CodecCold-News";
   @include font(
     $font-codec-cold-regular,
     400,
-    var(--font-size2),
-    0.02em,
+    var(--font-size3),
+    0em,
     1.3em,
     none
   );

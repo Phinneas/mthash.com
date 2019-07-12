@@ -1,10 +1,8 @@
 @import "../../styles/--scss-vars.scss";
 
-.hash-price-wrapper {
-  > p {
-    margin: 0 calc(var(--subdiv) * 6);
-  }
+.price-wrapper {
   > .difference-wrapper {
+    margin: 0 calc(var(--subdiv) * 6);
     $arrow-size: var(--subdiv);
 
     display: flex;
@@ -55,12 +53,12 @@
   box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
   @include regular-text();
 
-  .title {
-    padding-left: calc(var(--subdiv) * 4);
+  > .token-name-wrapper {
+    margin-right: calc(var(--subdiv) * 6);
   }
 
-  > .action-wrapper {
-    padding-left: calc(var(--baseline) * 2);
+  .title {
+    padding-left: calc(var(--subdiv) * 4);
   }
 
   p {

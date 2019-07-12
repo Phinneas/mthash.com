@@ -44,7 +44,7 @@ export default class HomePage extends React.Component {
 
           <div class="content-wrapper">
             <div class="caption-wrapper">
-              <h1 className="title2">
+              <h1 className="title3">
                 The Most Accessible Mining and Exchange Platform
               </h1>
               <h2 className="light-text">
@@ -79,7 +79,7 @@ export default class HomePage extends React.Component {
         </section>
         <section id="section-mining-platform">
           <div className="content-wrapper">
-            <h1 className="title2">
+            <h1 className="title3">
               Grow Your Portfolio by Mining and Trading In One Place
             </h1>
             <h2 className="light-text">
