@@ -63,12 +63,5 @@
   .action-button {
     padding: calc(var(--subdiv) * 1.5) calc(var(--subdiv) * 4);
     border-color: $color-d4-1;
-
-    &:hover {
-      background-color: unset;
-      p {
-        color: $color-d0 !important;
-      }
-    }
   }
 }

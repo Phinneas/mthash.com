@@ -23,6 +23,10 @@
         background: linear-gradient(to bottom, #3e4185 0%, #7521df 100%);
         margin-top: calc(var(--baseline));
         padding: calc(var(--subdiv) * 3) calc(var(--baseline));
+
+        &:hover {
+          background: #7521df;
+        }
       }
 
       > .title,

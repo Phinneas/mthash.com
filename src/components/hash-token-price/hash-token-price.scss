@@ -71,10 +71,6 @@
   > .action-wrapper {
     > .buy-token-button {
       padding: calc(var(--subdiv) * 3) calc(var(--subdiv) * 7);
-
-      &:hover {
-        background-color: $color-d0-7;
-      }
     }
   }
 

@@ -29,10 +29,6 @@
       > .get-started-button {
         margin-top: calc(var(--baseline));
         padding: calc(var(--subdiv) * 3) calc(var(--subdiv) * 4);
-
-        &:hover {
-          background-color: $color-d0-7;
-        }
       }
     }
     > .illustrations-wrapper {

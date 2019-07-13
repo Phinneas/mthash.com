@@ -203,11 +203,11 @@ export default class HomePage extends React.Component {
             </div>
             <div className="illustrations-wrapper">
               <img
-                src={require("../../assets/img/home/card-4/screen.png")}
+                src={require("../../assets/img/home/card-4/screen2.png")}
                 alt="sry"
               />
               <img
-                src={require("../../assets/img/home/card-4/screen2.png")}
+                src={require("../../assets/img/home/card-4/screen.png")}
                 alt="sry"
               />
             </div>
@@ -360,7 +360,7 @@ export default class HomePage extends React.Component {
             />
             <FeatureV2
               imgName="home/section-founders-token/iconB"
-              title="Founder’s Rights"
+              title="Earning Power"
               text="Use Founder’s tokens to get extra earning power on tokens from trading while mining on the platform"
               format="svg"
             />

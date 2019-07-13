@@ -109,10 +109,6 @@
         > .buy-now-button {
           font-size: 15px;
           padding: calc(var(--subdiv) * 2) calc(var(--subdiv) * 5 + 2px);
-
-          &:hover {
-            background-color: $color-a0;
-          }
         }
       }
 

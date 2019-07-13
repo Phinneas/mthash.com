@@ -2,7 +2,7 @@
 
 .subscribe-wrapper {
   height: fit-content;
-  padding: calc(var(--baseline) * 6) calc(var(--baseline) * 9);
+  padding: calc(var(--baseline) * 6) 0;
   position: relative;
 
   > .bg {
@@ -13,7 +13,7 @@
   > .content-wrapper {
     position: relative;
     display: flex;
-    max-width: 1329px;
+    max-width: 1278px;
     margin: auto;
 
     > .left-column {
@@ -35,18 +35,6 @@
     > .right-column {
       flex-basis: 60%;
       margin: 0;
-
-      input {
-        padding: calc(var(--subdiv) * 4);
-      }
-
-      > .get-starged-bottom {
-        padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 8);
-
-        &:hover {
-          background-color: $color-a0;
-        }
-      }
     }
   }
 }
