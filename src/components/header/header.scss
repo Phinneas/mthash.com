@@ -24,9 +24,11 @@
         display: flex;
         flex-shrink: 0;
         align-items: center;
+
         > p {
           height: fit-content;
           @include logo-text();
+          margin-left: calc(var(--subdiv) * 3);
           cursor: pointer;
           color: $color-d0;
         }
@@ -109,7 +111,7 @@
     }
   }
   &.gray {
-    background-color: #eeeef0;
+    background-color: #ecedf0;
   }
   &.dark {
     background-color: #121626;
