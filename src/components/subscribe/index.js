@@ -22,6 +22,7 @@ function Subscribe({ text, subText, buttonText }) {
           buttonType="green"
           buttonText={buttonText}
           className="right-column"
+          buttonClassName="get-starged-bottom"
         />
       </div>
     </section>

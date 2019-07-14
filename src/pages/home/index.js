@@ -42,9 +42,9 @@ export default class HomePage extends React.Component {
             alt="sry"
           />
 
-          <div class="content-wrapper">
-            <div class="caption-wrapper">
-              <h1 className="title2">
+          <div className="content-wrapper">
+            <div className="caption-wrapper">
+              <h1 className="title3">
                 The Most Accessible Mining and Exchange Platform
               </h1>
               <h2 className="light-text">
@@ -79,7 +79,7 @@ export default class HomePage extends React.Component {
         </section>
         <section id="section-mining-platform">
           <div className="content-wrapper">
-            <h1 className="title2">
+            <h1 className="title3">
               Grow Your Portfolio by Mining and Trading In One Place
             </h1>
             <h2 className="light-text">
@@ -203,11 +203,11 @@ export default class HomePage extends React.Component {
             </div>
             <div className="illustrations-wrapper">
               <img
-                src={require("../../assets/img/home/card-4/screen.png")}
+                src={require("../../assets/img/home/card-4/screen2.png")}
                 alt="sry"
               />
               <img
-                src={require("../../assets/img/home/card-4/screen2.png")}
+                src={require("../../assets/img/home/card-4/screen.png")}
                 alt="sry"
               />
             </div>
@@ -337,7 +337,11 @@ export default class HomePage extends React.Component {
                   <b>Become a Founder</b>
                 </h1>
                 <p className="text">Join the Hash Power Revolution</p>
-                <Button text="Buy Now" type="green" />
+                <Button
+                  text="Buy Now"
+                  type="green"
+                  className="buy-now-button"
+                />
               </div>
               <div className="right">
                 <img
@@ -356,7 +360,7 @@ export default class HomePage extends React.Component {
             />
             <FeatureV2
               imgName="home/section-founders-token/iconB"
-              title="Founder’s Rights"
+              title="Earning Power"
               text="Use Founder’s tokens to get extra earning power on tokens from trading while mining on the platform"
               format="svg"
             />

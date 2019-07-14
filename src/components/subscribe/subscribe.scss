@@ -2,7 +2,7 @@
 
 .subscribe-wrapper {
   height: fit-content;
-  padding: calc(var(--baseline) * 6) calc(var(--baseline) * 9);
+  padding: calc(var(--baseline) * 6) 0;
   position: relative;
 
   > .bg {
@@ -13,7 +13,7 @@
   > .content-wrapper {
     position: relative;
     display: flex;
-    max-width: 1329px;
+    max-width: 1278px;
     margin: auto;
 
     > .left-column {
@@ -34,7 +34,7 @@
 
     > .right-column {
       flex-basis: 60%;
-      margin-left: calc(var(--baseline) * 2);
+      margin: 0;
     }
   }
 }

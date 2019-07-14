@@ -1,40 +1,43 @@
 @import "../../styles/--scss-vars.scss";
 
-.hash-price-wrapper {
-  > p {
-    margin: 0 calc(var(--subdiv) * 6);
-  }
-  > .difference-wrapper {
-    $arrow-size: var(--subdiv);
-
+.price-wrapper {
+  > .align-wrapper {
     display: flex;
-    align-items: center;
+    flex-basis: 70%;
+    justify-content: space-between;
 
-    > .arrow {
-      height: 0px;
-      width: 0px;
-      border-style: solid;
-      border-width: $arrow-size;
-    }
-    > p {
-      margin-left: 3px;
-    }
-    &.positive {
+    > .difference-wrapper {
+      $arrow-size: var(--subdiv);
+
+      display: flex;
+      align-items: center;
+
       > .arrow {
-        border-color: transparent transparent $color-a0 transparent;
-        transform: translateY(calc(#{$arrow-size} / -2));
+        height: 0px;
+        width: 0px;
+        border-style: solid;
+        border-width: $arrow-size;
       }
       > p {
-        color: $color-a0;
+        margin-left: 3px;
       }
-    }
-    &.negative {
-      > .arrow {
-        border-color: $color-c0 transparent transparent transparent;
-        transform: translateY(calc(#{$arrow-size} / 2));
+      &.positive {
+        > .arrow {
+          border-color: transparent transparent $color-a0 transparent;
+          transform: translateY(calc(#{$arrow-size} / -2));
+        }
+        > p {
+          color: $color-a0;
+        }
       }
-      > p {
-        color: $color-c0;
+      &.negative {
+        > .arrow {
+          border-color: $color-c0 transparent transparent transparent;
+          transform: translateY(calc(#{$arrow-size} / 2));
+        }
+        > p {
+          color: $color-c0;
+        }
       }
     }
   }
@@ -50,17 +53,29 @@
   align-items: center;
   border-radius: $input-rounding;
   background-color: $color-w0;
-  padding: calc(var(--subdiv) * 4) calc(var(--subdiv) * 8);
+  padding: calc(var(--subdiv) * 3 + 2px) calc(var(--subdiv) * 6);
   overflow: hidden;
   box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
   @include regular-text();
 
-  .title {
-    padding-left: calc(var(--subdiv) * 4);
+  > .token-name-wrapper {
+    margin-right: calc(var(--subdiv) * 6);
+    display: flex;
+    align-items: center;
+  }
+
+  > .price-wrapper {
+    flex-basis: 23%;
   }
 
   > .action-wrapper {
-    padding-left: calc(var(--baseline) * 2);
+    > .buy-token-button {
+      padding: calc(var(--subdiv) * 3) calc(var(--subdiv) * 7);
+    }
+  }
+
+  .title {
+    padding-left: calc(var(--subdiv) * 4);
   }
 
   p {
@@ -69,10 +84,5 @@
     > span {
       color: $color-d4;
     }
-  }
-  > div {
-    height: fit-content;
-    display: flex;
-    align-items: center;
   }
 }

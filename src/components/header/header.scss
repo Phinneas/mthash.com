@@ -5,7 +5,7 @@
 
   height: calc(var(--baseline) * 4);
   width: 100%;
-  min-width: $brake2-2 * 1.25;
+  // min-width: $brake2-2 * 1.25;
   display: flex;
   align-items: center;
   -webkit-user-select: none;
@@ -14,94 +14,84 @@
   position: fixed;
   @include transition(background-color #{","} box-shadow #{","} height, $time6);
 
-  > a {
-    @include position(absolute, unset, unset, unset, $side-padding);
-    width: 9%;
-
-    > .logo-wrapper {
-      height: fit-content;
-      width: 100%;
-      display: flex;
-      flex-shrink: 0;
-
-      > p {
-        height: fit-content;
-        margin: auto;
-        @include logo-text();
-        cursor: pointer;
-      }
-      > .image-wrapper {
-        width: 30%;
-        margin-right: var(--subdiv);
-        position: relative;
-
-        > img {
-          @include position(absolute, 0, unset, unset, 0);
-          width: 100%;
-        }
-        &:after {
-          content: "";
-          display: block;
-          padding-top: 100%;
-        }
-      }
-    }
-  }
-  > .menu-wrapper {
-    height: 100%;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    @include position(absolute, unset, unset, unset, 50%);
-    transform: translateX(-50%);
-
-    > li {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      border-radius: 5px;
-
-      > a {
-        padding: calc(var(--subdiv) * 3) calc(var(--subdiv) * 4);
-
-        > p {
-          @include light-text();
-          color: $color-do-6;
-          pointer-events: none;
-        }
-      }
-      &:hover > a > p,
-      &.active > a > p {
-        color: $color-d4;
-      }
-    }
-  }
-  > .buttons-wrapper {
-    width: fit-content;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    @include position(absolute, unset, $side-padding, unset, unset);
+  > .inner-wrapper {
+    @include nav-wrapper();
 
     > a {
-      > p {
-        @include light-text();
-        color: $color-do-6;
-        margin-right: calc(var(--subdiv) * 4);
-        cursor: pointer;
+      > .logo-wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
 
-        &:hover {
+        > p {
+          height: fit-content;
+          @include logo-text();
+          margin-left: calc(var(--subdiv) * 3);
+          cursor: pointer;
+          color: $color-d0;
+        }
+
+        > img:first-child {
+          display: none;
+        }
+      }
+    }
+    > .menu-wrapper {
+      height: 100%;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+
+      > li {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 5px;
+
+        > a {
+          padding: calc(var(--subdiv) * 3) calc(var(--subdiv) * 4);
+
+          > p {
+            @include light-text();
+            color: $color-do-6;
+            pointer-events: none;
+          }
+        }
+        &:hover > a > p,
+        &.active > a > p {
           color: $color-d4;
         }
       }
     }
-    .button-wrapper {
-      margin-right: calc(var(--subdiv) * 3);
-      padding: calc(var(--subdiv) * 2) calc(var(--subdiv) * 3);
+
+    > .buttons-wrapper {
+      width: fit-content;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+
+      > a {
+        > p {
+          @include light-text();
+          color: $color-do-6;
+          margin-right: calc(var(--subdiv) * 4);
+          cursor: pointer;
+
+          &:hover {
+            color: $color-d4;
+          }
+        }
+      }
+      .button-wrapper {
+        padding: calc(var(--subdiv) * 2) calc(var(--subdiv) * 3);
+      }
     }
   }
+
   &.active {
     background-color: $color-w0;
     box-shadow: 0px 15px 50px -40px rgba($color-d0, 0.5);
@@ -113,64 +103,71 @@
   &.green {
     background-color: #1de9b6;
 
-    > .menu-wrapper > li > a > p,
-    > .buttons-wrapper > a > p {
-      color: $color-d0-4;
+    > .inner-wrapper {
+      > .menu-wrapper > li > a > p,
+      > .buttons-wrapper > a > p {
+        color: $color-d0-4;
+      }
     }
   }
   &.gray {
-    background-color: #d7d7d8;
+    background-color: #ecedf0;
   }
   &.dark {
     background-color: #121626;
 
-    > a {
-      > .logo-wrapper {
-        > p {
-          background: linear-gradient(to bottom, #606ea3 0%, #4e4376 100%);
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-        > .image-wrapper {
-          > img:last-child {
-            opacity: 0;
-          }
-        }
-      }
-    }
-    > .menu-wrapper {
-      > li {
-        > a {
+    > .inner-wrapper {
+      > a {
+        > .logo-wrapper {
           > p {
             background: linear-gradient(to bottom, #606ea3 0%, #4e4376 100%);
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
+
+          > img:first-of-type {
+            display: unset;
+          }
+
+          > img:last-of-type {
+            display: none;
+          }
         }
-        &:hover > a > p,
-        &.active > a > p {
-          background: linear-gradient(to bottom, #818cb6 0%, #635496 100%);
+      }
+      > .menu-wrapper {
+        > li {
+          > a {
+            > p {
+              background: linear-gradient(to bottom, #606ea3 0%, #4e4376 100%);
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+          &:hover > a > p,
+          &.active > a > p {
+            background: linear-gradient(to bottom, #818cb6 0%, #635496 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+      > .buttons-wrapper {
+        p {
+          background: linear-gradient(to bottom, #606ea3 0%, #4e4376 100%);
           background-clip: text;
           -webkit-text-fill-color: transparent;
         }
-      }
-    }
-    > .buttons-wrapper {
-      p {
-        background: linear-gradient(to bottom, #606ea3 0%, #4e4376 100%);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
 
-      > .button-wrapper {
-        border-color: #474975;
+        > .button-wrapper {
+          border-color: #474975;
 
-        &:hover {
-          background-color: #474975;
+          &:hover {
+            background-color: #474975;
 
-          > p {
-            -webkit-text-fill-color: unset;
-            color: #121626;
+            > p {
+              -webkit-text-fill-color: unset;
+              color: #121626;
+            }
           }
         }
       }

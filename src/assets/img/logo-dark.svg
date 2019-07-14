@@ -1,0 +1,29 @@
+<svg width="50.144" height="51.359" fill="none" version="1.1" viewBox="0 0 50.144 51.359" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter0_d" x=".83496" y=".76663" width="157.02" height="159.4" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+   <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+   <feOffset/>
+   <feGaussianBlur stdDeviation="6.5"/>
+   <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.13 0"/>
+   <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+   <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+  </filter>
+  <linearGradient id="paint0_linear-3" x1="79.343" x2="79.343" y1="58.169" y2="146.54" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#606EA3" offset="0"/>
+   <stop stop-color="#4E4376" offset="1"/>
+  </linearGradient>
+  <linearGradient id="paint4_linear-7" x1="52.013" x2="106.78" y1="42.038" y2="96.809" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#606EA3" offset="0"/>
+   <stop stop-color="#4E4376" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="matrix(.95707 0 0 .97261 57.609 -3.4622)" fill="none">
+  <g transform="matrix(.40128 0 0 .40091 -65.732 -2.6354)" fill="none">
+   <g clip-rule="evenodd" fill-rule="evenodd" filter="url(#filter0_d)" stroke-width=".33">
+    <path d="m81.585 59.289c-1.1207-1.4943-3.3622-1.4943-4.4829 0l-62.074 82.766c-1.3853 1.847-0.0674 4.483 2.2414 4.483h124.15c2.309 0 3.626-2.636 2.241-4.483zm0 14.83c-1.1207-1.4943-3.3622-1.4943-4.4829 0l-44.322 59.096c-1.3853 1.847-0.0674 4.483 2.2414 4.483h88.644c2.309 0 3.627-2.636 2.242-4.483z" fill="url(#paint0_linear-3)" stroke="url(#paint0_linear-3)"/>
+    <path d="m81.38 29.153c-1.0942-1.0942-2.8682-1.0942-3.9624 0l-38.289 38.289c-1.0942 1.0942-1.0942 2.8682 0 3.9624l38.289 38.289c1.0942 1.094 2.8682 1.094 3.9624 0l38.289-38.289c1.094-1.0942 1.094-2.8682 0-3.9624zm-54.77 38.289c-1.0942 1.0942-1.0942 2.8682 0 3.9624l50.808 50.808c1.0942 1.094 2.8682 1.094 3.9624 0l50.808-50.808c1.094-1.0942 1.094-2.8682 0-3.9624l-50.808-50.808c-1.0942-1.0942-2.8682-1.0942-3.9624 0z" fill="url(#paint4_linear-7)" stroke="url(#paint4_linear-7)"/>
+   </g>
+  </g>
+ </g>
+</svg>

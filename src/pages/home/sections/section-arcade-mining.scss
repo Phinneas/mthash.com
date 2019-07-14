@@ -2,9 +2,11 @@
   height: fit-content;
   position: relative;
   z-index: 0;
+  padding-top: 70px;
+  background-color: $color-d0-8;
 
   > .bg {
-    @include position(absolute, 0, unset, unset, unset);
+    @include position(absolute, 150, unset, unset, unset);
     width: 100%;
     max-height: $top-bg-height;
     height: 1229px;
@@ -20,9 +22,10 @@
       > .get-started-button {
         background: linear-gradient(to bottom, #3e4185 0%, #7521df 100%);
         margin-top: calc(var(--baseline));
+        padding: calc(var(--subdiv) * 3) calc(var(--baseline));
 
         &:hover {
-          background: #3e4185;
+          background: #7521df;
         }
       }
 
@@ -54,6 +57,7 @@
         > .trademark {
           text-transform: lowercase;
           @include content-paragraph2();
+          font-size: var(--font-size5);
           margin: var(--subdiv);
         }
 

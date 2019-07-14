@@ -2,37 +2,51 @@ import React from "react";
 import Button from "../button";
 import "./table-raw.scss";
 
-function TableRaw(props) {
+function TableRaw({
+  difference,
+  imgName,
+  title,
+  shtitle,
+  price,
+  totalHash,
+  tokens,
+  svgPath
+}) {
   var diffState = "positive";
-  var difference = props.difference;
-  if (parseFloat(props.difference) < 0) {
+  var diffColor = "#8DCC4E";
+
+  if (parseFloat(difference) < 0) {
     diffState = "negative";
     difference = difference.substring(1, difference.lenght);
+    diffColor = "#CC4E4E";
   }
+
   return (
     <li className="table-raw">
       <div className="title-wrapper">
         <img
           className="icon"
-          src={require("../../assets/img/" + props.imgName + ".png")}
+          src={require("../../assets/img/" + imgName + ".png")}
           alt="sry"
         />
         <p className="title regular-text">
-          {props.title} &nbsp;<span>{props.shtitle}</span>
+          {title} &nbsp;<span>{shtitle}</span>
         </p>
       </div>
       <div className="price-wrapper">
-        <p className="price regular-text">${props.price}</p>
-        <div className={"difference-wrapper " + diffState}>
-          <div className="arrow" />
-          <p className="value regular-text">{difference}%</p>
+        <div className="align-wrapper">
+          <p className="price regular-text">${price}</p>
+          <div className={"difference-wrapper " + diffState}>
+            <div className="arrow" />
+            <p className="value regular-text">{difference}%</p>
+          </div>
         </div>
       </div>
-      <p className="total-hash-value regular-text">{props.totalHash} TH/s</p>
-      <p className="tokens-value regular-text">{props.tokens}</p>
+      <p className="total-hash-value regular-text">{totalHash} TH/s</p>
+      <p className="tokens-value regular-text">{tokens}</p>
       <div className="token-graph-wrapper">
         <svg viewBox="0 0 123 43" fill="none">
-          <path d={props.svgPath} stroke="#8DCC4E" strokeWidth="2" />
+          <path d={svgPath} stroke={diffColor} strokeWidth="2" />
         </svg>
       </div>
       <div className="action-wrapper">

@@ -1,293 +1,287 @@
-@import '../../styles/--scss-vars.scss';
+@import "../../styles/--scss-vars.scss";
 
-.signUp-wrapper{
+.signUp-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: $color-b0-2;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  > .header {
+    $side-padding: calc(var(--baseline) * 10 - var(--subdiv));
+
+    height: calc(var(--baseline) * 4);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+    position: fixed;
+
+    > a {
+      @include position(absolute, unset, unset, unset, $side-padding);
+      width: 9%;
+
+      > .logo-wrapper {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-shrink: 0;
+
+        > p {
+          height: fit-content;
+          margin: auto;
+          @include logo-text();
+          cursor: pointer;
+          color: $color-w0;
+        }
+        > .image-wrapper {
+          margin-right: calc(var(--subdiv) * 2);
+          position: relative;
+        }
+      }
+    }
+    > .buttons-wrapper {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      @include position(absolute, unset, $side-padding, unset, unset);
+
+      .sign-up-button {
+        padding: calc(var(--subdiv) * 2) calc(var(--subdiv) * 3);
+      }
+
+      > * {
+        margin-right: calc(var(--subdiv) * 4);
+      }
+      > a {
+        cursor: pointer;
+
+        > p {
+          @include light-text();
+          color: $color-w0;
+          pointer-events: none;
+        }
+        &:hover {
+          > p {
+            color: rgba($color-w0, 0.7);
+          }
+        }
+      }
+      > input {
+        display: none;
+
+        &:checked {
+          ~ label:after {
+            transform: translateY(-1.5px) rotate(180deg);
+          }
+        }
+      }
+      > label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        > p {
+          @include light-text();
+          color: $color-w0;
+          pointer-events: none;
+        }
+        &:after {
+          content: "";
+          display: block;
+          width: 0px;
+          height: 0px;
+          border-color: $color-w0 transparent transparent transparent;
+          border-width: 3px;
+          border-style: solid;
+          margin-left: var(--subdiv);
+          transform: translateY(1.5px) rotate(0);
+        }
+        &:hover {
+          > p {
+            color: rgba($color-w0, 0.7);
+          }
+          &:after {
+            border-top-color: rgba($color-w0, 0.7);
+          }
+        }
+      }
+      .button-wrapper {
+        border-color: $color-w0;
+
+        > p {
+          color: $color-w0;
+        }
+        &:hover {
+          background-color: $color-w0;
+
+          > p {
+            color: $color-b0;
+          }
+        }
+      }
+    }
+  }
+  > .content-wrapper {
     height: 100%;
     width: 100%;
-    background-color: $color-b0-2;
-    position: relative;
-    overflow: hidden;
+    padding-top: calc(var(--baseline) * 3 + var(--subdiv) * 2);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    > .header{
-        $side-padding: calc(var(--baseline) * 10 - var(--subdiv));
-    
-        height: calc(var(--baseline) * 4);
+    > .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      > h3 {
+        @include logo-text();
+        font-weight: 500;
+        color: $color-w0;
+        margin-bottom: calc(var(--baseline) + var(--subdiv) * 2);
+      }
+      > .form {
         width: 100%;
+        max-width: calc(var(--baseline) * 12 + var(--subdiv) * 4);
         display: flex;
+        flex-direction: column;
         align-items: center;
-        -webkit-user-select: none;
-        user-select: none;
-        position: fixed;
-    
-        > a{
-            @include position(absolute, unset,unset,unset,$side-padding);
-            width: 9%;
-    
-            > .logo-wrapper{
-                height: fit-content;
-                width: 100%;
-                display: flex;
-                flex-shrink: 0;
-    
-                > p{
-                    height: fit-content;
-                    margin: auto;
-                    @include logo-text();
-                    cursor: pointer;
-                    color: $color-w0;
-                }
-                > .image-wrapper{
-                    width: 28%;
-                    margin-right: calc(var(--subdiv) * 2);
-                    position: relative;
-    
-                    > img{
-                        @include position(absolute, 0,unset,unset,0);
-                        width: 100%;
-                    }
-                    &:after{
-                        content: "";
-                        display: block;
-                        padding-top: 100%
-                    }
-                }
+        background-color: $color-w0;
+        border-radius: 5px;
+        box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
+        padding: calc(var(--baseline) + var(--subdiv) * 2)
+          calc(var(--subdiv) * 10);
+
+        > .logo {
+          height: fit-content;
+          width: 46.5%;
+          display: flex;
+          flex-shrink: 0;
+          margin-bottom: calc(var(--baseline) + var(--subdiv));
+          pointer-events: none;
+          -webkit-user-select: none;
+          user-select: none;
+
+          > p {
+            height: fit-content;
+            margin: auto;
+            @include logo-text();
+            color: $color-d0;
+          }
+          > .image-wrapper {
+            width: 28%;
+            margin-right: calc(var(--subdiv) * 2);
+            position: relative;
+
+            > img {
+              @include position(absolute, 0, unset, unset, 0);
+              width: 100%;
             }
+            &:after {
+              content: "";
+              display: block;
+              padding-top: 100%;
+            }
+          }
         }
-        > .buttons-wrapper{
-            width: fit-content;
-            display: flex;
-            align-items: center;
+        > .input-wrapper {
+          margin-bottom: calc(var(--subdiv) * 2);
+        }
+        > .agreement {
+          margin: calc(var(--subdiv) * 2) 0;
+          display: flex;
+          align-items: center;
+
+          input[type="checkbox"] {
+            display: none;
+
+            &:checked {
+              ~ .checkmark {
+                background-color: $color-a0;
+                border-color: transparent;
+
+                > svg {
+                  .check {
+                    stroke: $color-w0;
+                  }
+                }
+                &:hover {
+                  background-color: $color-a0-2;
+                }
+              }
+            }
+          }
+          > .checkmark {
+            height: fit-content;
+            width: 4%;
             flex-shrink: 0;
-            @include position(absolute, unset,$side-padding,unset,unset);
-    
-            > *{
-                margin-right: calc(var(--subdiv) * 4);
-            }
-            > a{
-                cursor: pointer;
+            margin-right: calc(var(--subdiv) * 2);
+            padding: 3px;
+            background-color: $color-w0;
+            border: 1px solid $color-b3;
+            border-radius: 100%;
+            cursor: pointer;
 
-                > p{
-                    @include light-text();
-                    color: $color-w0;
-                    pointer-events: none;
-                }
-                &:hover{
-                    > p{
-                        color: rgba($color-w0, 0.7);
-                    }
-                }
-            }
-            > input{
-                display: none;
+            > svg {
+              width: 100%;
+              display: block;
 
-                &:checked{
-                    ~ label:after{
-                        transform: translateY(-1.5px) rotate(180deg);
-                    }
-                }
+              .check {
+                stroke: transparent;
+              }
             }
-            > label{
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-
-                > p{
-                    @include light-text();
-                    color: $color-w0;
-                    pointer-events: none;
+            &:hover {
+              > svg {
+                .check {
+                  stroke: $color-b3;
                 }
-                &:after{
-                    content: "";
-                    display: block;
-                    width: 0px;
-                    height: 0px;
-                    border-color: $color-w0 transparent transparent transparent;
-                    border-width: 3px;
-                    border-style: solid;
-                    margin-left: var(--subdiv);
-                    transform: translateY(1.5px) rotate(0);
-                }
-                &:hover{
-                    > p{
-                        color: rgba($color-w0, 0.7);
-                    }
-                    &:after{
-                        border-top-color: rgba($color-w0, 0.7);;
-                    }
-                }
+              }
             }
-            .button-wrapper{
-                border-color: $color-w0;
+          }
+          > p {
+            width: 100%;
+            @include small-text();
+            color: $color-d4;
+            cursor: default;
+            -webkit-user-select: none;
+            user-select: none;
 
-                > p{
-                    color: $color-w0;
-                }
-                &:hover{
-                    background-color: $color-w0;
+            > a {
+              cursor: pointer;
+              color: $color-d0;
 
-                    > p{
-                        color: $color-b0;
-                    }
-                }
+              &:hover {
+                color: $color-d3;
+              }
             }
+          }
         }
-    }
-    > .content-wrapper{
-        height: 100%;
-        width: 100%;
-        padding-top: calc(var(--baseline) * 3 + var(--subdiv) * 2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        > .form-wrapper{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            > h3{
-                @include logo-text();
-                font-weight: 500;
-                color: $color-w0;
-                margin-bottom: calc(var(--baseline) + var(--subdiv) * 2);
-            }
-            > .form{
-                width: 100%;
-                max-width: calc(var(--baseline) * 12 + var(--subdiv) * 4);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: $color-w0;
-                border-radius: 5px;
-                box-shadow: 0px 0px 30px -10px rgba($color-d0, 0.2);
-                padding: calc(var(--baseline) + var(--subdiv) * 2) calc(var(--subdiv) * 10);
-
-                > .logo{
-                    height: fit-content;
-                    width: 46.5%;
-                    display: flex;
-                    flex-shrink: 0;
-                    margin-bottom: calc(var(--baseline) + var(--subdiv));
-                    pointer-events: none;
-                    -webkit-user-select: none;
-                    user-select: none;
-        
-                    > p{
-                        height: fit-content;
-                        margin: auto;
-                        @include logo-text();
-                        color: $color-d0;
-                    }
-                    > .image-wrapper{
-                        width: 28%;
-                        margin-right: calc(var(--subdiv) * 2);
-                        position: relative;
-        
-                        > img{
-                            @include position(absolute, 0,unset,unset,0);
-                            width: 100%;
-                        }
-                        &:after{
-                            content: "";
-                            display: block;
-                            padding-top: 100%
-                        }
-                    }
-                }
-                > .input-wrapper{
-                    margin-bottom: calc(var(--subdiv) * 2);
-                }
-                > .agreement{
-                    margin: calc(var(--subdiv) * 2) 0;
-                    display: flex;
-                    align-items: center;
-
-                    input[type="checkbox"]{
-                        display: none;
-
-                        &:checked{
-                            ~ .checkmark{
-                                background-color: $color-a0;
-                                border-color: transparent;
-
-                                > svg{
-                                    .check{
-                                        stroke: $color-w0;
-                                    }
-                                }
-                                &:hover{
-                                    background-color: $color-a0-2;
-                                }
-                            }
-                        }
-                    }
-                    > .checkmark{
-                        height: fit-content;
-                        width: 4%;
-                        flex-shrink: 0;
-                        margin-right: calc(var(--subdiv) * 2);
-                        padding: 3px;
-                        background-color: $color-w0;
-                        border: 1px solid $color-b3;
-                        border-radius: 100%;
-                        cursor: pointer;
-
-                        > svg{
-                            width: 100%;
-                            display: block;
-
-                            .check{
-                                stroke: transparent;
-                            }
-                        }
-                        &:hover{
-                            > svg{
-                                .check{
-                                    stroke: $color-b3;
-                                }
-                            }
-                        }
-                    }
-                    > p{
-                        width: 100%;
-                        @include small-text();
-                        color: $color-d4;
-                        cursor: default;
-                        -webkit-user-select: none;
-                        user-select: none;
-
-                        > a{
-                            cursor: pointer;
-                            color: $color-d0;
-
-                            &:hover{
-                                color: $color-d3;
-                            }
-                        }
-                    }
-                }
-                > .button-wrapper{
-                    margin-top: calc(var(--subdiv) * 6);
-                }
-            }
-            > a{
-                margin-top: calc(var(--baseline));
-                cursor: pointer;
-
-                > p{
-                    @include input-text();
-                    color: $color-w0;
-                    pointer-events: none;
-                    -webkit-user-select: none;
-                    user-select: none;
-                }
-                &:hover{
-                    > p{
-                        color: rgba($color-w0, 0.7);
-                    }
-                }
-            }
+        > .button-wrapper {
+          margin-top: calc(var(--subdiv) * 6);
         }
+      }
+      > a {
+        margin-top: calc(var(--baseline));
+        cursor: pointer;
+
+        > p {
+          @include input-text();
+          color: $color-w0;
+          pointer-events: none;
+          -webkit-user-select: none;
+          user-select: none;
+        }
+        &:hover {
+          > p {
+            color: rgba($color-w0, 0.7);
+          }
+        }
+      }
     }
+  }
 }
