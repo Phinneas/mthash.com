@@ -8,7 +8,7 @@
   > .bg {
     @include position(absolute, 150, unset, unset, unset);
     width: 100%;
-    max-height: $top-bg-height;
+    max-height: $background-max-height;
     height: 1229px;
   }
   > .card {

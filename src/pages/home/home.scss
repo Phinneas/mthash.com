@@ -1,7 +1,5 @@
 @import "../../styles/--scss-vars.scss";
 
-$top-bg-height: 1130px;
-
 .company-wrapper {
   height: fit-content;
   width: 100%;
@@ -12,8 +10,16 @@ $top-bg-height: 1130px;
     @include position(absolute, 0, unset, unset, unset);
     width: 100%;
     min-width: 920px;
-    height: 104vh;
-    max-height: $top-bg-height;
+    @include full-height-block();
+    // max-height: $background-max-height;
+
+    // @media only screen and (min-width: 1600px) {
+    //   height: calc(100vh + 23%);
+    // }
+
+    // @media screen and (max-device-width: 1400px) and (min-device-width: 360px) {
+    //   height: 1160px;
+    // }
   }
 
   > section {

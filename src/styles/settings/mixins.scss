@@ -522,3 +522,17 @@
     margin: auto 20%;
   }
 }
+
+@mixin block {
+  box-shadow: 0px 0px 133px -10px rgba($color-d0, 0.2);
+  border-radius: 33px;
+  width: $content-max-width;
+}
+
+@mixin full-height-block($incr: 0) {
+  height: 100vh;
+
+  @media screen and (max-device-width: 1400px) and (min-device-width: 360px) {
+    height: 1130px;
+  }
+}

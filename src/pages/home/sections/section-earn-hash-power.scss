@@ -1,12 +1,12 @@
 #section-earn-hash-power {
-  height: 100vh;
   display: flex;
+  @include full-height-block();
 
   > .bg {
     @include position(absolute, 0, unset, unset, unset);
     width: 100%;
-    // max-height: $top-bg-height;
-    height: 100vh;
+    // max-height: $background-max-height;
+    @include full-height-block();
   }
 
   > .card {
