@@ -514,14 +514,6 @@
   max-width: 1329px;
   display: flex;
   justify-content: space-between;
-
-  @media screen and (min-width: 1900px) {
-    margin: auto 15%;
-  }
-
-  @media screen and (min-width: 2500px) {
-    margin: auto 20%;
-  }
 }
 
 @mixin block {

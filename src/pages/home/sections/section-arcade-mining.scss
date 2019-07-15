@@ -15,10 +15,11 @@
     height: 1130px;
 
     > .text-wrapper {
-      width: 60%;
+      width: 50%;
       padding-right: 4%;
       margin: 0 calc(var(--baseline) * 3) calc(var(--baseline) * 4)
         calc(var(--baseline) * 3 + var(--subdiv) * 4);
+      max-width: 380px;
 
       > .get-started-button {
         background: linear-gradient(to bottom, #3e4185 0%, #7521df 100%);
@@ -79,6 +80,7 @@
         background: linear-gradient(to bottom, #515490 0%, #7521df 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+
         // mix-blend-mode: screen;
 
         > span:first-child {

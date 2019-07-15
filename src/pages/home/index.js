@@ -204,11 +204,11 @@ export default class HomePage extends React.Component {
             </div>
             <div className="illustrations-wrapper">
               <img
-                src={require("../../assets/img/home/card-4/screen2.png")}
+                src={require("../../assets/img/home/card-4/screen.png")}
                 alt="sry"
               />
               <img
-                src={require("../../assets/img/home/card-4/screen.png")}
+                src={require("../../assets/img/home/card-4/screen2.png")}
                 alt="sry"
               />
             </div>

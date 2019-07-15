@@ -14,8 +14,7 @@
 
   > .card {
     > .text-wrapper {
-      margin: 0 calc(var(--baseline) * 5) calc(var(--subdiv) * 8)
-        calc(var(--baseline) + var(--subdiv) * 5);
+      max-width: 380px;
       color: $color-d0;
 
       > .link {
@@ -27,20 +26,18 @@
       }
     }
     > .illustrations-wrapper {
-      width: 60%;
+      width: 59%;
       position: relative;
-      margin: calc(var(--baseline) * 6 + var(--subdiv) * 2) 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: calc(var(--baseline) * 3);
 
-      > img:first-of-type {
-        @include position(absolute, -6%, unset, unset, 14%);
-      }
+      // margin: calc(var(--baseline) * 6 + var(--subdiv) * 2) 0;
+
       > img:last-of-type {
-        @include position(absolute, 37%, unset, unset, 29%);
-      }
-      &:after {
-        content: "";
-        display: block;
-        padding-top: 62%;
+        margin-left: -164px;
+        margin-top: 192px;
       }
     }
   }
