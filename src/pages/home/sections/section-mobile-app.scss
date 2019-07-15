@@ -14,7 +14,7 @@
 
   > .card {
     > .text-wrapper {
-      padding-right: calc(var(--baseline) * 3 + var(--subdiv) * 2);
+      padding-right: calc(var(--baseline) * 3 + var(--subdiv) * 6);
       margin: 0 calc(var(--baseline) * 5) calc(var(--subdiv) * 8)
         calc(var(--baseline) * 5 + var(--subdiv) * 7);
       color: $color-d0;

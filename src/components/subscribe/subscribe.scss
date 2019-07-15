@@ -2,7 +2,7 @@
 
 .subscribe-wrapper {
   height: fit-content;
-  padding: calc(var(--baseline) * 6) 0;
+  padding: calc(var(--baseline) * 5) 0;
   position: relative;
 
   > .bg {
@@ -13,7 +13,7 @@
   > .content-wrapper {
     position: relative;
     display: flex;
-    max-width: 1178px;
+    max-width: 1278px;
     margin: auto;
 
     > .left-column {
