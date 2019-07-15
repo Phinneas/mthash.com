@@ -525,7 +525,7 @@
 @mixin full-height-block($incr: 0) {
   height: 100vh;
 
-  @media screen and (max-device-width: 1400px) and (min-device-width: 360px) {
+  @media screen and (max-device-width: 1024px) {
     height: 1130px;
   }
 }

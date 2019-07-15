@@ -5,10 +5,22 @@
 
   @include full-height-block();
 
+  @media screen and (min-width: 1200px) {
+    height: 125vh;
+  }
+
+  @media screen and (max-device-width: 480px) {
+    height: 1130px;
+  }
+
   > .title1 {
     margin-top: calc(var(--baseline) * 10 + var(--subdiv));
     text-align: center;
     font-size: 48px;
+
+    @media screen and (max-height: 650px) {
+      margin-top: calc(var(--baseline) * 6 + var(--subdiv));
+    }
   }
   > .sub-title1 {
     margin-top: calc(var(--subdiv) * 2);

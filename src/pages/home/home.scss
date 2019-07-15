@@ -14,7 +14,15 @@
     // max-height: $background-max-height;
     height: calc(100vh + 4%);
 
-    @media screen and (max-device-width: 1400px) and (min-device-width: 360px) {
+    @media screen and (min-width: 1200px) {
+      height: calc(100vh + 24%);
+    }
+
+    // @media screen and (min-width: 1200px) {
+    //   height: calc(100vh + 24%);
+    // }
+
+    @media screen and (max-device-width: 480px) {
       height: 1160px;
     }
   }
@@ -40,7 +48,7 @@
       > .title2 {
         margin-top: calc(var(--baseline) * 3 + var(--subdiv) * 5);
       }
-      > .light-text {
+      card > .light-text {
         margin-top: calc(var(--subdiv) * 3);
         color: $color-d4;
       }
