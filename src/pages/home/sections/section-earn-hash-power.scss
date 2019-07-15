@@ -23,11 +23,12 @@
       }
 
       > p {
+        padding-left: calc(var(--subdiv) * 2);
         margin-left: calc(var(--baseline) * 3);
       }
 
       > .get-started-button {
-        margin-top: calc(var(--baseline));
+        margin-top: calc(var(--subdiv) * 2);
         padding: calc(var(--subdiv) * 3) calc(var(--subdiv) * 4);
       }
     }

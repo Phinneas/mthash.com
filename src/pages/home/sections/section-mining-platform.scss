@@ -33,6 +33,10 @@
         width: 50%;
         padding-right: calc(var(--subdiv));
         box-sizing: border-box;
+
+        .simple-intuitive-icon {
+          width: 93px;
+        }
       }
       > .right-side {
         height: fit-content;

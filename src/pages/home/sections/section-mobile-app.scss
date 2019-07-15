@@ -14,18 +14,16 @@
 
   > .card {
     > .text-wrapper {
-      padding-right: 4%;
-      margin: 0 calc(var(--baseline) * 5) calc(var(--subdiv) * 8);
+      padding-right: calc(var(--baseline) * 3 + var(--subdiv) * 2);
+      margin: 0 calc(var(--baseline) * 5) calc(var(--subdiv) * 8)
+        calc(var(--baseline) * 5 + var(--subdiv) * 7);
       color: $color-d0;
 
       > .link {
         display: flex;
-        margin-top: var(--baseline);
 
         > a {
-          > img {
-            width: 100%;
-          }
+          margin: var(--baseline) calc(var(--subdiv) * 2) 0 0;
         }
       }
     }

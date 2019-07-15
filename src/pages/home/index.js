@@ -94,6 +94,7 @@ export default class HomePage extends React.Component {
                   title="Simple & Intuitive"
                   text="Mining is now as easy as trading, simply pick the coin you want to mine using hash tokens"
                   format="svg"
+                  iconClassName="simple-intuitive-icon"
                 />
                 <Feature
                   imgName="home/card-2/icon2"
@@ -232,7 +233,7 @@ export default class HomePage extends React.Component {
             </div>
             <div className="text-wrapper">
               <h1 className="title">
-                <b>Mine and Trade Crypto</b> &nbsp;
+                <b>Mine and Trade Crypto</b>&nbsp;
                 <span>on the Go</span>
               </h1>
               <p className="text">
