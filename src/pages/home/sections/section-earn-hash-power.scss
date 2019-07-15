@@ -1,12 +1,12 @@
 #section-earn-hash-power {
-  height: 100vh;
   display: flex;
+  @include full-height-block();
 
   > .bg {
     @include position(absolute, 0, unset, unset, unset);
     width: 100%;
-    // max-height: $top-bg-height;
-    height: 100vh;
+    // max-height: $background-max-height;
+    @include full-height-block();
   }
 
   > .card {
@@ -23,11 +23,12 @@
       }
 
       > p {
+        padding-left: calc(var(--subdiv) * 5);
         margin-left: calc(var(--baseline) * 3);
       }
 
       > .get-started-button {
-        margin-top: calc(var(--baseline));
+        margin-top: calc(var(--subdiv) * 2);
         padding: calc(var(--subdiv) * 3) calc(var(--subdiv) * 4);
       }
     }

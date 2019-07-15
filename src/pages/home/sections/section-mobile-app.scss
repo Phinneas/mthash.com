@@ -1,32 +1,29 @@
 #section-mobile-app {
-  height: 100vh;
   display: flex;
   position: relative;
   z-index: 2;
   background-color: #1de9b6;
-  // overflow: hidden;
+  @include full-height-block();
 
   > .bg {
     @include position(absolute, 0, unset, unset, unset);
     width: 100%;
-    max-height: $top-bg-height;
+    max-height: $background-max-height;
     height: 100vh;
   }
 
   > .card {
     > .text-wrapper {
-      padding-right: 4%;
-      margin: 0 calc(var(--baseline) * 5) calc(var(--subdiv) * 8);
+      padding-right: calc(var(--baseline) * 3 + var(--subdiv) * 6);
+      margin: 0 calc(var(--baseline) * 5) calc(var(--subdiv) * 8)
+        calc(var(--baseline) * 5 + var(--subdiv) * 7);
       color: $color-d0;
 
       > .link {
         display: flex;
-        margin-top: var(--baseline);
 
         > a {
-          > img {
-            width: 100%;
-          }
+          margin: var(--baseline) calc(var(--subdiv) * 2) 0 0;
         }
       }
     }

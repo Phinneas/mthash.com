@@ -2,12 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./feature-v2.scss";
 
-function FeatureV2({ type, imgName, title, text, subText, format = "png" }) {
+function FeatureV2({
+  type,
+  imgName,
+  title,
+  text,
+  subText,
+  iconClassName,
+  format = "png"
+}) {
   return (
     <div className={`feature-v2-wrapper ${type}`}>
       <div className="icon">
         <img
-          className="icon"
+          className={`icon ${iconClassName ? iconClassName : ""}`}
           src={require(`../../assets/img/${imgName}.${format}`)}
           alt="sry"
         />
