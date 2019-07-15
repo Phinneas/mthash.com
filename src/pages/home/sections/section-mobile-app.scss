@@ -14,9 +14,8 @@
 
   > .card {
     > .text-wrapper {
-      padding-right: calc(var(--baseline) * 3 + var(--subdiv) * 6);
       margin: 0 calc(var(--baseline) * 5) calc(var(--subdiv) * 8)
-        calc(var(--baseline) * 5 + var(--subdiv) * 7);
+        calc(var(--baseline) + var(--subdiv) * 5);
       color: $color-d0;
 
       > .link {
@@ -28,15 +27,15 @@
       }
     }
     > .illustrations-wrapper {
-      width: 50%;
+      width: 60%;
       position: relative;
       margin: calc(var(--baseline) * 6 + var(--subdiv) * 2) 0;
 
       > img:first-of-type {
-        @include position(absolute, -6%, 42%, unset, unset);
+        @include position(absolute, -6%, unset, unset, 14%);
       }
       > img:last-of-type {
-        @include position(absolute, 37%, unset, unset, 37%);
+        @include position(absolute, 37%, unset, unset, 29%);
       }
       &:after {
         content: "";
