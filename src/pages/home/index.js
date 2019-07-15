@@ -159,14 +159,14 @@ export default class HomePage extends React.Component {
                 <span>with Tokens</span>
               </h1>
               <div className="text">
-                <p>
+                <span>
                   Use tokens to mine like playing in an arcade. Pick your
                   favorite coin to mine.
-                </p>
-                <p>
+                </span>
+                <span>
                   Each cryptocurrency is like an arcade game you can choose to
                   mine with hash power tokens.
-                </p>
+                </span>
               </div>
               <Button
                 text="Get Started"
@@ -204,11 +204,11 @@ export default class HomePage extends React.Component {
             </div>
             <div className="illustrations-wrapper">
               <img
-                src={require("../../assets/img/home/card-4/screen2.png")}
+                src={require("../../assets/img/home/card-4/screen.png")}
                 alt="sry"
               />
               <img
-                src={require("../../assets/img/home/card-4/screen.png")}
+                src={require("../../assets/img/home/card-4/screen2.png")}
                 alt="sry"
               />
             </div>

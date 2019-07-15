@@ -70,12 +70,13 @@
           }
         }
         &.social {
+          min-width: calc(var(--baseline) * 6);
           li {
             display: flex;
             align-items: center;
+            justify-content: space-between;
 
             > .social-item {
-              margin-right: var(--baseline);
               cursor: pointer;
             }
           }
