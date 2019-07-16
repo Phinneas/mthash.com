@@ -159,10 +159,12 @@ export default class HomePage extends React.Component {
                 <span>with Tokens</span>
               </h1>
               <div className="text">
+                <span />
                 <span>
                   Use tokens to mine like playing in an arcade. Pick your
                   favorite coin to mine.
                 </span>
+                <span />
                 <span>
                   Each cryptocurrency is like an arcade game you can choose to
                   mine with hash power tokens.

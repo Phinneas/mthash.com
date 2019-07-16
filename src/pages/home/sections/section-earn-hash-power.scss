@@ -40,6 +40,10 @@
         // padding-left: calc(var(--subdiv) * 5);
         // margin-left: calc(var(--baseline) * 3);
         max-width: 380px;
+
+        &:first-of-type {
+          margin-bottom: calc(var(--subdiv) * 3);
+        }
       }
 
       > .get-started-button {
