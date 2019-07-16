@@ -27,7 +27,7 @@
     }
 
     > .text {
-      @include light-text();
+      @include light-text-small();
       margin-top: calc(var(--subdiv) * 3);
       color: $color-d0;
       line-height: 1.8em;

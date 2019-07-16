@@ -31,7 +31,7 @@
     margin-bottom: calc(var(--subdiv) * 3);
   }
   > .text {
-    @include light-text();
+    @include light-text-small();
     color: $color-d0;
     flex-grow: 1;
     line-height: 1.8em;

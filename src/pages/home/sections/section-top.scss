@@ -9,12 +9,16 @@
     margin-top: calc(var(--baseline) * 10 + var(--subdiv));
     text-align: center;
     font-size: 48px;
+
+    @media screen and (max-height: 650px) {
+      margin-top: calc(var(--baseline) * 6 + var(--subdiv));
+    }
   }
   > .sub-title1 {
     margin-top: calc(var(--subdiv) * 2);
     text-align: center;
     color: $color-d4-3;
-    font-size: 21px;
+    font-size: $font-size5;
   }
 
   // @media only screen and (min-width: $brake2) {

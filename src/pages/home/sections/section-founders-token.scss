@@ -38,7 +38,7 @@
         calc(var(--baseline) * 4) calc(var(--baseline) * 4);
 
       > .left-column {
-        flex-basis: 48%;
+        flex-basis: 54%;
         padding-right: calc(var(--baseline) * 4);
 
         > .text {
@@ -53,8 +53,8 @@
 
       > .right-column {
         position: relative;
-        flex-basis: 52%;
-        padding-left: calc(var(--baseline) * 4 + var(--subdiv));
+        flex-basis: 50%;
+        padding-left: calc(var(--baseline) * 3 + var(--subdiv) * 4);
         border-left: 1px solid lightgray;
 
         > .list {

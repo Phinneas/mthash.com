@@ -8,8 +8,16 @@
   > .bg {
     @include position(absolute, 0, unset, unset, unset);
     width: 100%;
-    max-height: $background-max-height;
+    // max-height: $background-max-height;
     height: 100vh;
+
+    @media screen and (min-width: 1200px) {
+      height: calc(100vh + 24%);
+    }
+
+    @media screen and (max-device-width: 480px) {
+      height: 1130px;
+    }
   }
 
   > .card {
