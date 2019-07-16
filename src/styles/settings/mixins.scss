@@ -522,10 +522,14 @@
   width: $content-max-width;
 }
 
-@mixin full-height-block($incr: 0) {
+@mixin full-height-block {
   height: 100vh;
 
-  @media screen and (max-device-width: 1024px) {
+  @media screen and (min-width: 1200px) {
+    height: 125vh;
+  }
+
+  @media screen and (max-device-width: 480px) {
     height: 1130px;
   }
 }

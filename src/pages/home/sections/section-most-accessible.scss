@@ -30,7 +30,8 @@
     > .features-wrapper {
       display: flex;
       justify-content: center;
-      margin-top: calc(var(--baseline) * 3 + var(--subdiv) * 2);
+      margin: calc(var(--baseline) * 3 + var(--subdiv) * 2) auto 0;
+      max-width: $content-max-width;
 
       > .feature-v2-wrapper {
         margin: 0 calc(var(--baseline) + var(--subdiv) * 4);

@@ -7,6 +7,14 @@
     width: 100%;
     // max-height: $background-max-height;
     @include full-height-block();
+
+    @media screen and (min-width: 1200px) {
+      height: calc(100vh + 24%);
+    }
+
+    @media screen and (max-device-width: 480px) {
+      height: 1160px;
+    }
   }
 
   > .card {
