@@ -33,6 +33,16 @@ $font-codec-cold-news: "CodecCold-News";
   @include font(
     $font-codec-cold-news,
     300,
+    var(--font-size4),
+    0em,
+    1.3em,
+    none
+  );
+}
+@mixin light-text-small {
+  @include font(
+    $font-codec-cold-news,
+    300,
     var(--font-size3),
     0em,
     1.3em,
@@ -43,7 +53,7 @@ $font-codec-cold-news: "CodecCold-News";
   @include font(
     $font-codec-cold-regular,
     600,
-    var(--font-size3),
+    var(--font-size4),
     0em,
     1.3em,
     none
@@ -113,7 +123,7 @@ $font-codec-cold-news: "CodecCold-News";
   @include font(
     $font-codec-cold-regular,
     300,
-    var(--font-size3),
+    var(--font-size4),
     0em,
     1.6em,
     none

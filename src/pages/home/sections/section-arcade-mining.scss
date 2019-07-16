@@ -23,7 +23,7 @@
 
       > .get-started-button {
         background: linear-gradient(to bottom, #3e4185 0%, #7521df 100%);
-        margin-top: calc(var(--baseline));
+        margin-top: calc(var(--baseline) - var(--subdiv) * 3);
         padding: calc(var(--subdiv) * 3) calc(var(--baseline));
 
         &:hover {
